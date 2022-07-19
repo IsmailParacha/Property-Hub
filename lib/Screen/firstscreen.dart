@@ -61,7 +61,6 @@ class _FirstScreenState extends State<FirstScreen> {
                   height: 50,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(child: Text('Buyer')),
