@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                           margin: EdgeInsets.only(left: 15),
-                          width: 230,
+                          width: 300,
                           height: 40,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
@@ -151,6 +151,7 @@ class _HomeState extends State<Home> {
                                     child: Container(
                                       height: 130,
                                       width: 330,
+                                      //  width: MediaQuery.of(context).size.width,
                                       decoration: BoxDecoration(
                                         color: Colors.white38,
                                         borderRadius: BorderRadius.circular(20),
@@ -209,7 +210,7 @@ class _HomeState extends State<Home> {
                                   borderRadius: BorderRadius.circular(20),
                                   child: Container(
                                     height: 324,
-                                    width: 330,
+                                    width: 340,
                                     decoration: BoxDecoration(
                                       color: Colors.white38,
                                       borderRadius: BorderRadius.circular(20),
@@ -221,22 +222,31 @@ class _HomeState extends State<Home> {
                                         ),
                                         Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Text(
-                                              'New Project',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 8.0),
+                                              child: Text(
+                                                'New Project',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
                                             ),
-                                            SizedBox(
-                                              width: 80,
-                                            ),
-                                            Text(
-                                              'View All',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.blue),
+                                            // SizedBox(
+                                            //   width: 80,
+                                            // ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  right: 8.0),
+                                              child: Text(
+                                                'View All',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.blue),
+                                              ),
                                             )
                                           ],
                                         ),
@@ -1078,9 +1088,9 @@ class _HomeState extends State<Home> {
   // ignore: non_constant_identifier_names
   Widget Property(var img) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20, left: 20),
+      padding: const EdgeInsets.only(right: 10, left: 10),
       child: Container(
-        height: 260,
+        height: 270,
         width: 200,
         child: Column(
           children: [
@@ -1090,7 +1100,7 @@ class _HomeState extends State<Home> {
                     MaterialPageRoute(builder: (context) => NewProject()));
               },
               child: Container(
-                  height: 100.0,
+                  height: 90,
                   width: 220,
                   decoration: BoxDecoration(
                     image: DecorationImage(
