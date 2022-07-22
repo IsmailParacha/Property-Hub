@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import 'platinum.dart';
 
 class Propertysection extends StatelessWidget {
-  const Propertysection({Key? key}) : super(key: key);
+  final String imagelink;
+  final String name;
+
+  final String prize;
+  Propertysection(this.imagelink, this.name, this.prize);
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +30,7 @@ class Propertysection extends StatelessWidget {
                     width: 220,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/home.jpeg'),
-                          fit: BoxFit.cover),
+                          image: AssetImage('$imagelink'), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Stack(
@@ -61,7 +64,7 @@ class Propertysection extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 12)),
                         Text(
-                          '60.6Lac to 5.5 Crore',
+                          '$prize',
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                         )
@@ -79,9 +82,9 @@ class Propertysection extends StatelessWidget {
                             fontWeight: FontWeight.bold)),
                     Padding(
                       padding: const EdgeInsets.only(top: 5),
-                      child: Text('Penthouse, Flat',
+                      child: Text('$name',
                           style: TextStyle(
-                              color: Colors.blue,
+                              color: Color.fromRGBO(57, 65, 96, 1.0),
                               fontSize: 14,
                               fontWeight: FontWeight.bold)),
                     ),

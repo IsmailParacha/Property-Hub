@@ -10,15 +10,15 @@ class RecommendedSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(1.0),
-      child: Material(
-        elevation: 1,
-        borderRadius: BorderRadius.circular(10),
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-          ),
-          height: 210,
-          width: 220,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.grey[100],
+          borderRadius: BorderRadius.circular(10),
+        ),
+        height: 220,
+        width: 220,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
