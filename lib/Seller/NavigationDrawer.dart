@@ -33,7 +33,7 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                         borderRadius: BorderRadius.circular(10)),
                     child: Center(
                       child: Text(
-                        "Mehar Umair",
+                        "Ismail Paracha",
                         style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,

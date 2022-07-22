@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:property/widgets/LatestNews.dart';
+import 'package:property/widgets/PostAnAdd.dart';
+import 'package:property/widgets/Property.dart';
+import 'package:property/widgets/Recommended.dart';
+import 'package:property/widgets/platinum.dart';
 import '../../screen/new_project.dart';
 import '../Seller/Construction.dart';
 import '../Seller/NavigationDrawer.dart';
@@ -17,7 +22,7 @@ class _HomeState extends State<Home> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        // key: _scaffoldKey,
+        key: _scaffoldKey,
         drawer: NavigationDrawer(),
         body: Stack(
           clipBehavior: Clip.none,
@@ -137,206 +142,100 @@ class _HomeState extends State<Home> {
                           children: [
                             Column(
                               children: [
-                                InkWell(
-                                  onTap: () {
-                                    // Navigator.push(
-                                    //     context,
-                                    //     MaterialPageRoute(
-                                    //         builder: (context) =>
-                                    //             DashBoardSeller()));
-                                  },
-                                  child: Material(
-                                    borderRadius: BorderRadius.circular(20),
-                                    elevation: 0.9,
-                                    child: Container(
-                                      height: 130,
-                                      width: 330,
-                                      //  width: MediaQuery.of(context).size.width,
-                                      decoration: BoxDecoration(
-                                        color: Colors.white38,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              Image.asset(
-                                                'images/home.png',
-                                                height: 90,
-                                                width: 90,
-                                              ),
-                                              Container(
-                                                width: 200,
-                                                child: Text(
-                                                  'Looking to sell or rent out your property?',
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.black),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Container(
-                                            height: 30,
-                                            width: 200,
-                                            decoration: BoxDecoration(
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                            ),
-                                            child: Center(
-                                              child: Text(
-                                                'Post an Ad',
-                                                style: TextStyle(
-                                                    color: Colors.white),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                                PostAdd(),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                    top: 15.0,
+                                    left: 15.0,
+                                    right: 15.0,
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "New Project",
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Text(
+                                          "View All",
+                                          style: TextStyle(
+                                              fontSize: 14, color: Colors.blue),
+                                        )
+                                      ],
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Material(
-                                  elevation: 0.9,
-                                  borderRadius: BorderRadius.circular(20),
-                                  child: Container(
-                                    height: 324,
-                                    width: 340,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white38,
-                                      borderRadius: BorderRadius.circular(20),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10.0),
+                                  child: SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: Row(
+                                      children: [
+                                        Propertysection(),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Propertysection(),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Propertysection()
+                                      ],
                                     ),
+                                  ),
+                                ),
+
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 8.0),
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width *
+                                        0.95,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey[100],
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                     child: Column(
                                       children: [
-                                        SizedBox(
-                                          height: 10,
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Text(
+                                            "Platinum Agencies",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold),
+                                          ),
                                         ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 8.0),
-                                              child: Text(
-                                                'New Project',
-                                                style: TextStyle(
-                                                    fontSize: 14,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                            ),
-                                            // SizedBox(
-                                            //   width: 80,
-                                            // ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  right: 8.0),
-                                              child: Text(
-                                                'View All',
-                                                style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.blue),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                        Container(
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height /
-                                              2.7,
-                                          child: ListView.builder(
-                                              scrollDirection: Axis.horizontal,
-                                              itemCount: 4,
-                                              itemBuilder: (
-                                                BuildContext context,
-                                                int f,
-                                              ) {
-                                                return Property(img[f]);
-                                              }),
+                                        SingleChildScrollView(
+                                          scrollDirection: Axis.horizontal,
+                                          child: Row(
+                                            children: [
+                                              PlatinumSection(),
+                                              PlatinumSection(),
+                                              PlatinumSection(),
+                                              PlatinumSection()
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                //
-                                Material(
-                                  elevation: 0.9,
-                                  borderRadius: BorderRadius.circular(20),
-                                  child: Container(
-                                    height: 173,
-                                    width: 330,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white38,
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 8.0),
-                                      child: Column(
-                                        children: [
-                                          Text(
-                                            'Platinum Agencies',
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          Container(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height /
-                                                6.3,
-                                            child: ListView.builder(
-                                                scrollDirection:
-                                                    Axis.horizontal,
-                                                itemCount: 5,
-                                                itemBuilder: (
-                                                  BuildContext context,
-                                                  int p,
-                                                ) {
-                                                  return Platinum(
-                                                      (name6[p]), (img6[p]));
-                                                }),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Material(
-                                  elevation: 0.9,
-                                  borderRadius: BorderRadius.circular(20),
-                                  child: Container(
-                                    height: 278,
-                                    width: 330,
-                                    decoration: BoxDecoration(
-                                      color: Colors.white38,
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: Column(
-                                      children: [
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        //recommended in buy
-                                        Row(
+
+                                Padding(
+                                  padding: const EdgeInsets.all(10.0),
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
                                           mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
                                               'Recommended Properties',
@@ -344,9 +243,6 @@ class _HomeState extends State<Home> {
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.bold),
                                             ),
-                                            SizedBox(
-                                              width: 80,
-                                            ),
                                             Text(
                                               'View All',
                                               style: TextStyle(
@@ -355,85 +251,328 @@ class _HomeState extends State<Home> {
                                             )
                                           ],
                                         ),
-                                        Container(
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height /
-                                              3.2,
-                                          child: ListView.builder(
-                                              scrollDirection: Axis.horizontal,
-                                              itemCount: 4,
-                                              itemBuilder: (
-                                                BuildContext context,
-                                                int r,
-                                              ) {
-                                                return Recomanded(img3[r]);
-                                              }),
+                                      ),
+                                      SingleChildScrollView(
+                                        scrollDirection: Axis.horizontal,
+                                        child: Row(
+                                          children: [
+                                            RecommendedSection(),
+                                            SizedBox(
+                                              width: 9,
+                                            ),
+                                            RecommendedSection(),
+                                            SizedBox(
+                                              width: 9,
+                                            ),
+                                            RecommendedSection(),
+                                            SizedBox(
+                                              width: 9,
+                                            ),
+                                            RecommendedSection(),
+                                            SizedBox(
+                                              width: 9,
+                                            ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
+                                      )
+                                    ],
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 20,
-                                ),
-                                Material(
-                                  elevation: 0.9,
-                                  borderRadius: BorderRadius.circular(20),
+                                //latestNews
+                                Padding(
+                                  padding: const EdgeInsets.all(12.0),
                                   child: Container(
-                                    height: 233,
-                                    width: 330,
                                     decoration: BoxDecoration(
                                       color: Colors.white38,
                                       borderRadius: BorderRadius.circular(20),
                                     ),
                                     child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         SizedBox(
                                           height: 10,
                                         ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceAround,
-                                          children: [
-                                            Text(
-                                              'Latest News',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            SizedBox(
-                                              width: 80,
-                                            ),
-                                            Text(
-                                              'View All',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.blue),
-                                            )
-                                          ],
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                'Latest News',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              Text(
+                                                'View All',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.blue),
+                                              )
+                                            ],
+                                          ),
                                         ),
                                         Container(
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height /
-                                              3.9,
-                                          child: ListView.builder(
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height /
+                                                3.9,
+                                            child: SingleChildScrollView(
                                               scrollDirection: Axis.horizontal,
-                                              itemCount: 4,
-                                              itemBuilder: (
-                                                BuildContext context,
-                                                int a,
-                                              ) {
-                                                return News(img2[a]);
-                                              }),
-                                        ),
+                                              child: Row(
+                                                children: [
+                                                  LatestNewsSection(),
+                                                  SizedBox(
+                                                    width: 7,
+                                                  ),
+                                                  LatestNewsSection(),
+                                                  SizedBox(
+                                                    width: 7,
+                                                  ),
+                                                  LatestNewsSection()
+                                                ],
+                                              ),
+                                            )),
                                       ],
                                     ),
                                   ),
                                 ),
+                                // Material(
+                                //   elevation: 0.9,
+                                //   borderRadius: BorderRadius.circular(20),
+                                //   child: Container(
+                                //     height: 324,
+                                //     width: 340,
+                                //     decoration: BoxDecoration(
+                                //       color: Colors.white38,
+                                //       borderRadius: BorderRadius.circular(20),
+                                //     ),
+                                //     child: Column(
+                                //       children: [
+                                //         SizedBox(
+                                //           height: 10,
+                                //         ),
+                                //         Row(
+                                //           mainAxisAlignment:
+                                //               MainAxisAlignment.spaceBetween,
+                                //           children: [
+                                //             Padding(
+                                //               padding: const EdgeInsets.only(
+                                //                   left: 8.0),
+                                //               child: Text(
+                                //                 'New Project',
+                                //                 style: TextStyle(
+                                //                     fontSize: 14,
+                                //                     fontWeight:
+                                //                         FontWeight.bold),
+                                //               ),
+                                //             ),
+                                //             // SizedBox(
+                                //             //   width: 80,
+                                //             // ),
+                                //             Padding(
+                                //               padding: const EdgeInsets.only(
+                                //                   right: 8.0),
+                                //               child: Text(
+                                //                 'View All',
+                                //                 style: TextStyle(
+                                //                     fontSize: 14,
+                                //                     color: Colors.blue),
+                                //               ),
+                                //             )
+                                //           ],
+                                //         ),
+                                //         Container(
+                                //           height: MediaQuery.of(context)
+                                //                   .size
+                                //                   .height /
+                                //               2.7,
+                                //           child: ListView.builder(
+                                //               scrollDirection: Axis.horizontal,
+                                //               itemCount: 4,
+                                //               itemBuilder: (
+                                //                 BuildContext context,
+                                //                 int f,
+                                //               ) {
+                                //                 return Property(img[f]);
+                                //               }),
+                                //         ),
+                                //       ],
+                                //     ),
+                                //   ),
+                                // ),
+                                // SizedBox(
+                                //   height: 20,
+                                // ),
+                                //
+                                //~~~~socail Icons Section~~~~
+                                // Material(
+                                //   elevation: 0.9,
+                                //   borderRadius: BorderRadius.circular(20),
+                                //   child: Container(
+                                //     height: 173,
+                                //     width: 330,
+                                //     decoration: BoxDecoration(
+                                //       color: Colors.white38,
+                                //       borderRadius: BorderRadius.circular(20),
+                                //     ),
+                                //     child: Padding(
+                                //       padding: const EdgeInsets.only(top: 8.0),
+                                //       child: Column(
+                                //         children: [
+                                //           Text(
+                                //             'Platinum Agencies',
+                                //             style: TextStyle(
+                                //                 fontSize: 18,
+                                //                 fontWeight: FontWeight.bold),
+                                //           ),
+                                //           Container(
+                                //             height: MediaQuery.of(context)
+                                //                     .size
+                                //                     .height /
+                                //                 6.3,
+                                //             child: ListView.builder(
+                                //                 scrollDirection:
+                                //                     Axis.horizontal,
+                                //                 itemCount: 5,
+                                //                 itemBuilder: (
+                                //                   BuildContext context,
+                                //                   int p,
+                                //                 ) {
+                                //                   return Platinum(
+                                //                       (name6[p]), (img6[p]));
+                                //                 }),
+                                //           ),
+                                //         ],
+                                //       ),
+                                //     ),
+                                //   ),
+                                // ),
+                                // SizedBox(
+                                //   height: 20,
+                                // ),
+                                //~~~Recommended section~~~~
+                                // Material(
+                                //   elevation: 0.9,
+                                //   borderRadius: BorderRadius.circular(20),
+                                //   child: Container(
+                                //     height: 278,
+                                //     width: 330,
+                                //     decoration: BoxDecoration(
+                                //       color: Colors.white38,
+                                //       borderRadius: BorderRadius.circular(20),
+                                //     ),
+                                //     child: Column(
+                                //       children: [
+                                //         SizedBox(
+                                //           height: 10,
+                                //         ),
+                                //         //recommended in buy
+                                //         Row(
+                                //           mainAxisAlignment:
+                                //               MainAxisAlignment.spaceAround,
+                                //           children: [
+                                //             Text(
+                                //               'Recommended Properties',
+                                //               style: TextStyle(
+                                //                   fontSize: 14,
+                                //                   fontWeight: FontWeight.bold),
+                                //             ),
+                                //             SizedBox(
+                                //               width: 80,
+                                //             ),
+                                //             Text(
+                                //               'View All',
+                                //               style: TextStyle(
+                                //                   fontSize: 14,
+                                //                   color: Colors.blue),
+                                //             )
+                                //           ],
+                                //         ),
+                                //         Container(
+                                //           height: MediaQuery.of(context)
+                                //                   .size
+                                //                   .height /
+                                //               3.2,
+                                //           child: ListView.builder(
+                                //               scrollDirection: Axis.horizontal,
+                                //               itemCount: 4,
+                                //               itemBuilder: (
+                                //                 BuildContext context,
+                                //                 int r,
+                                //               ) {
+                                //                 return Recomanded(img3[r]);
+                                //               }),
+                                //         ),
+                                //       ],
+                                //     ),
+                                //   ),
+                                // ),
+                                // SizedBox(
+                                //   height: 20,
+                                // ),
+
+                                //~~~Latest New Section ~~~~
+                                // Material(
+                                //   elevation: 0.9,
+                                //   borderRadius: BorderRadius.circular(20),
+                                //   child: Container(
+                                //     height: 233,
+                                //     width: 330,
+                                //     decoration: BoxDecoration(
+                                //       color: Colors.white38,
+                                //       borderRadius: BorderRadius.circular(20),
+                                //     ),
+                                //     child: Column(
+                                //       children: [
+                                //         SizedBox(
+                                //           height: 10,
+                                //         ),
+                                //         Row(
+                                //           mainAxisAlignment:
+                                //               MainAxisAlignment.spaceAround,
+                                //           children: [
+                                //             Text(
+                                //               'Latest News',
+                                //               style: TextStyle(
+                                //                   fontSize: 14,
+                                //                   fontWeight: FontWeight.bold),
+                                //             ),
+                                //             SizedBox(
+                                //               width: 80,
+                                //             ),
+                                //             Text(
+                                //               'View All',
+                                //               style: TextStyle(
+                                //                   fontSize: 14,
+                                //                   color: Colors.blue),
+                                //             )
+                                //           ],
+                                //         ),
+                                //         Container(
+                                //           height: MediaQuery.of(context)
+                                //                   .size
+                                //                   .height /
+                                //               3.9,
+                                //           child: ListView.builder(
+                                //               scrollDirection: Axis.horizontal,
+                                //               itemCount: 4,
+                                //               itemBuilder: (
+                                //                 BuildContext context,
+                                //                 int a,
+                                //               ) {
+                                //                 return News(img2[a]);
+                                //               }),
+                                //         ),
+                                //       ],
+                                //     ),
+                                //   ),
+                                // ),
                                 SizedBox(
-                                  height: 400,
+                                  height: 300,
                                 )
                               ],
                             )
