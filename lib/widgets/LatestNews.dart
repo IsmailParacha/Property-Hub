@@ -3,7 +3,10 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class LatestNewsSection extends StatelessWidget {
-  const LatestNewsSection({Key? key}) : super(key: key);
+  final String imagelink;
+  final String title;
+  final String date;
+  LatestNewsSection(this.imagelink, this.title, this.date);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,7 @@ class LatestNewsSection extends StatelessWidget {
               width: 150,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/home.jpeg'), fit: BoxFit.cover),
+                    image: AssetImage('$imagelink'), fit: BoxFit.cover),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -29,7 +32,7 @@ class LatestNewsSection extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
-              child: Text('Property Hub Organizes Independence Day Celebration',
+              child: Text('$title',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 12,
@@ -37,7 +40,7 @@ class LatestNewsSection extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 70, top: 10, left: 8.0),
-              child: Text('August 17,2021',
+              child: Text('$date',
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 10,

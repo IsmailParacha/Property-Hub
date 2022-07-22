@@ -3,7 +3,12 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class PlatinumSection extends StatelessWidget {
-  const PlatinumSection({Key? key}) : super(key: key);
+  final String imagelink;
+  final String name;
+  PlatinumSection(
+    this.imagelink,
+    this.name,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +18,12 @@ class PlatinumSection extends StatelessWidget {
       width: 120,
       child: Column(
         children: [
-          Image.asset('images/twitter.png', height: 50, width: 60),
+          Image.asset('$imagelink', height: 50, width: 60),
           SizedBox(
             height: 5.0,
           ),
           Text(
-            'Lahore builders',
+            '$name',
             style: TextStyle(
               fontSize: 10,
             ),

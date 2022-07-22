@@ -177,15 +177,22 @@ class _HomeState extends State<Home> {
                                     scrollDirection: Axis.horizontal,
                                     child: Row(
                                       children: [
-                                        Propertysection(),
+                                        Propertysection(
+                                            'images/property1.jpg',
+                                            'Penthouse, Flat',
+                                            '60.6Lac to 5.5Crore'),
                                         SizedBox(
                                           width: 10,
                                         ),
-                                        Propertysection(),
+                                        Propertysection(
+                                            'images/property2.jpg',
+                                            'Penthouse, Portion',
+                                            '30Lac to 70Lac'),
                                         SizedBox(
                                           width: 10,
                                         ),
-                                        Propertysection()
+                                        Propertysection('images/property3.jpg',
+                                            'Penthouse, Flat', '60Lac to 70Lac')
                                       ],
                                     ),
                                   ),
@@ -215,10 +222,18 @@ class _HomeState extends State<Home> {
                                           scrollDirection: Axis.horizontal,
                                           child: Row(
                                             children: [
-                                              PlatinumSection(),
-                                              PlatinumSection(),
-                                              PlatinumSection(),
-                                              PlatinumSection()
+                                              PlatinumSection(
+                                                  'images/facebook.png',
+                                                  'Mian International Karachi'),
+                                              PlatinumSection(
+                                                  'images/instagram.png',
+                                                  'Lahore builders'),
+                                              PlatinumSection(
+                                                  'images/twitter.png',
+                                                  'Shah International states'),
+                                              PlatinumSection(
+                                                  'images/facebook.png',
+                                                  'Pakistan State Builders'),
                                             ],
                                           ),
                                         ),
@@ -256,19 +271,35 @@ class _HomeState extends State<Home> {
                                         scrollDirection: Axis.horizontal,
                                         child: Row(
                                           children: [
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property1.jpg',
+                                                'DHA Block 9, Defence Lahore',
+                                                '60.6Lac ',
+                                                'Portion for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property3.jpg',
+                                                'Gulshan Block 9, Lahore',
+                                                '70.6Lac ',
+                                                'House for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property2.jpg',
+                                                'DHA Block 9, Defence Lahore',
+                                                '80.6Lac ',
+                                                'Flat for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property1.jpg',
+                                                'DHA Block 9, Defence Lahore',
+                                                '60.6Lac ',
+                                                'House for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
@@ -324,15 +355,24 @@ class _HomeState extends State<Home> {
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
                                                 children: [
-                                                  LatestNewsSection(),
+                                                  LatestNewsSection(
+                                                      'images/property1.jpg',
+                                                      "Propert hub Oraganizes Independence Day Celebration",
+                                                      'August 14,2021'),
                                                   SizedBox(
                                                     width: 10,
                                                   ),
-                                                  LatestNewsSection(),
+                                                  LatestNewsSection(
+                                                      'images/property3.jpg',
+                                                      "Propert hub Oraganizes New Year Celebration",
+                                                      'Dec 30,2021'),
                                                   SizedBox(
                                                     width: 10,
                                                   ),
-                                                  LatestNewsSection()
+                                                  LatestNewsSection(
+                                                      'images/property1.jpg',
+                                                      "Propert hub Oraganizes Independence Day Celebration",
+                                                      'August 14,2021'),
                                                 ],
                                               ),
                                             )),
@@ -390,15 +430,24 @@ class _HomeState extends State<Home> {
                                     scrollDirection: Axis.horizontal,
                                     child: Row(
                                       children: [
-                                        Propertysection(),
+                                        Propertysection(
+                                            'images/property1.jpg',
+                                            'Penthouse, Flat',
+                                            '60.6Lac to 5.5Crore'),
                                         SizedBox(
                                           width: 10,
                                         ),
-                                        Propertysection(),
+                                        Propertysection(
+                                            'images/property1.jpg',
+                                            'Penthouse, Flat',
+                                            '60.6Lac to 5.5Crore'),
                                         SizedBox(
                                           width: 10,
                                         ),
-                                        Propertysection()
+                                        Propertysection(
+                                            'images/property1.jpg',
+                                            'Penthouse, Flat',
+                                            '60.6Lac to 5.5Crore')
                                       ],
                                     ),
                                   ),
@@ -428,10 +477,18 @@ class _HomeState extends State<Home> {
                                           scrollDirection: Axis.horizontal,
                                           child: Row(
                                             children: [
-                                              PlatinumSection(),
-                                              PlatinumSection(),
-                                              PlatinumSection(),
-                                              PlatinumSection()
+                                              PlatinumSection(
+                                                  'images/facebook.png',
+                                                  'Mian International Karachi'),
+                                              PlatinumSection(
+                                                  'images/instagram.png',
+                                                  'Lahore builders'),
+                                              PlatinumSection(
+                                                  'images/twitter.png',
+                                                  'Shah International states'),
+                                              PlatinumSection(
+                                                  'images/facebook.png',
+                                                  'Pakistan State Builders'),
                                             ],
                                           ),
                                         ),
@@ -469,19 +526,35 @@ class _HomeState extends State<Home> {
                                         scrollDirection: Axis.horizontal,
                                         child: Row(
                                           children: [
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property1.jpg',
+                                                'DHA Block 9, Defence Lahore',
+                                                '60.6Lac ',
+                                                'Portion for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property3.jpg',
+                                                'Gulshan Block 9, Lahore',
+                                                '70.6Lac ',
+                                                'House for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property2.jpg',
+                                                'DHA Block 9, Defence Lahore',
+                                                '80.6Lac ',
+                                                'Flat for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
-                                            RecommendedSection(),
+                                            RecommendedSection(
+                                                'images/property1.jpg',
+                                                'DHA Block 9, Defence Lahore',
+                                                '60.6Lac ',
+                                                'House for Sale'),
                                             SizedBox(
                                               width: 10,
                                             ),
@@ -537,15 +610,24 @@ class _HomeState extends State<Home> {
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
                                                 children: [
-                                                  LatestNewsSection(),
+                                                  LatestNewsSection(
+                                                      'images/property1.jpg',
+                                                      "Propert hub Oraganizes Independence Day Celebration",
+                                                      'August 14,2021'),
                                                   SizedBox(
                                                     width: 10,
                                                   ),
-                                                  LatestNewsSection(),
+                                                  LatestNewsSection(
+                                                      'images/property3.jpg',
+                                                      "Propert hub Oraganizes New Year Celebration",
+                                                      'Dec 30,2021'),
                                                   SizedBox(
                                                     width: 10,
                                                   ),
-                                                  LatestNewsSection()
+                                                  LatestNewsSection(
+                                                      'images/property1.jpg',
+                                                      "Propert hub Oraganizes Independence Day Celebration",
+                                                      'August 14,2021'),
                                                 ],
                                               ),
                                             )),

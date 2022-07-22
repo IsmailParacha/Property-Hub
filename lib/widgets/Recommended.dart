@@ -4,7 +4,12 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class RecommendedSection extends StatelessWidget {
-  const RecommendedSection({Key? key}) : super(key: key);
+  final String imagelink;
+  final String location;
+  final String type;
+
+  final String prize;
+  RecommendedSection(this.imagelink, this.location, this.prize, this.type);
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +34,7 @@ class RecommendedSection extends StatelessWidget {
                     width: 210,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('images/home.jpeg'),
-                          fit: BoxFit.cover),
+                          image: AssetImage('$imagelink'), fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Stack(
@@ -61,7 +65,7 @@ class RecommendedSection extends StatelessWidget {
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 12)),
                     Text(
-                      '75 Thousands',
+                      '$prize',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     )
@@ -75,13 +79,13 @@ class RecommendedSection extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 2.0),
-                      child: Text('House For Rent',
+                      child: Text('$type',
                           style: TextStyle(
                               color: Color.fromRGBO(57, 65, 96, 1.0),
                               fontSize: 14,
                               fontWeight: FontWeight.bold)),
                     ),
-                    Text('DHA 9 Town, Defence Lahore',
+                    Text('$location',
                         style: TextStyle(color: Colors.grey, fontSize: 14)),
                     Row(
                       children: [
