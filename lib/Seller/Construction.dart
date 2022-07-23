@@ -198,7 +198,7 @@ class _ConstructionsState extends State<Constructions> {
                       ]),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height / 0.8,
+                  height: MediaQuery.of(context).size.height / 1.8,
                   child: TabBarView(
                     children: [
                       Container(
@@ -247,7 +247,7 @@ class _ConstructionsState extends State<Constructions> {
                                       width: 5,
                                     ),
                                     Text(
-                                      'Zameen ID',
+                                      'Property ID',
                                       style: TextStyle(
                                         fontSize: 16,
                                         color: Color.fromRGBO(57, 65, 96, 1.0),
