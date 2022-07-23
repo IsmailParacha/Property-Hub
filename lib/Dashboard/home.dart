@@ -668,196 +668,24 @@ class _HomeState extends State<Home> {
                           child: ListView(
                             scrollDirection: Axis.vertical,
                             children: [
-                              Column(
-                                children: [
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Column(
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 12.0),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              'Exclusives',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            Text(
-                                              'View All',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.blue),
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                      SingleChildScrollView(
-                                        scrollDirection: Axis.horizontal,
-                                        child: Row(
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: ExclusiveSection(
-                                                  'images/property3.jpg',
-                                                  'Ghani Construction'),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: ExclusiveSection(
-                                                  'images/property2.jpg',
-                                                  'Ahmad Construction'),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: ExclusiveSection(
-                                                  'images/property1.jpg',
-                                                  'Paracha Construction'),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: ExclusiveSection(
-                                                  'images/property3.jpg',
-                                                  'Ali Construction'),
-                                            ),
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  //construction section
-                                  Column(
-                                    children: [
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 12.0),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              'Construction',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            SizedBox(
-                                              width: 80,
-                                            ),
-                                            Text(
-                                              'View All',
-                                              style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.blue),
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                      SingleChildScrollView(
-                                        scrollDirection: Axis.horizontal,
-                                        child: Row(children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: ConstructionSection(
-                                                'images/property1.jpg',
-                                                'Ali Construction'),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: ConstructionSection(
-                                                'images/property2.jpg',
-                                                'Ahmad Construction'),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: ConstructionSection(
-                                                'images/property3.jpg',
-                                                'Ghani Construction'),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: ConstructionSection(
-                                                'images/property1.jpg',
-                                                'Paracha Construction'),
-                                          ),
-                                        ]),
-                                      )
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 20,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 12.0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.92,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey[100],
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      child: Column(
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Text(
-                                              "Platinum Agencies",
-                                              style: TextStyle(
-                                                  fontSize: 18,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                          ),
-                                          SingleChildScrollView(
-                                            scrollDirection: Axis.horizontal,
-                                            child: Row(
-                                              children: [
-                                                PlatinumSection(
-                                                    'images/facebook.png',
-                                                    'Mian International Karachi'),
-                                                PlatinumSection(
-                                                    'images/instagram.png',
-                                                    'Lahore builders'),
-                                                PlatinumSection(
-                                                    'images/twitter.png',
-                                                    'Shah International states'),
-                                                PlatinumSection(
-                                                    'images/facebook.png',
-                                                    'Pakistan State Builders'),
-                                              ],
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 10,
                                     ),
-                                  ),
-
-                                  Padding(
-                                    padding: const EdgeInsets.all(10.0),
-                                    child: Column(
+                                    Column(
                                       children: [
                                         Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 10.0),
                                           child: Row(
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                'Recommended Properties',
+                                                'Exclusives',
                                                 style: TextStyle(
                                                     fontSize: 14,
                                                     fontWeight:
@@ -876,59 +704,163 @@ class _HomeState extends State<Home> {
                                           scrollDirection: Axis.horizontal,
                                           child: Row(
                                             children: [
-                                              RecommendedSection(
-                                                  'images/property1.jpg',
-                                                  'DHA Block 9, Defence Lahore',
-                                                  '60.6Lac ',
-                                                  'Portion for Sale'),
-                                              SizedBox(
-                                                width: 10,
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: ExclusiveSection(
+                                                    'images/property3.jpg',
+                                                    'Ghani Construction'),
                                               ),
-                                              RecommendedSection(
-                                                  'images/property3.jpg',
-                                                  'Gulshan Block 9, Lahore',
-                                                  '70.6Lac ',
-                                                  'House for Sale'),
-                                              SizedBox(
-                                                width: 10,
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: ExclusiveSection(
+                                                    'images/property2.jpg',
+                                                    'Ahmad Construction'),
                                               ),
-                                              RecommendedSection(
-                                                  'images/property2.jpg',
-                                                  'DHA Block 9, Defence Lahore',
-                                                  '80.6Lac ',
-                                                  'Flat for Sale'),
-                                              SizedBox(
-                                                width: 10,
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: ExclusiveSection(
+                                                    'images/property1.jpg',
+                                                    'Paracha Construction'),
                                               ),
-                                              RecommendedSection(
-                                                  'images/property1.jpg',
-                                                  'DHA Block 9, Defence Lahore',
-                                                  '60.6Lac ',
-                                                  'House for Sale'),
-                                              SizedBox(
-                                                width: 10,
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: ExclusiveSection(
+                                                    'images/property3.jpg',
+                                                    'Ali Construction'),
                                               ),
                                             ],
                                           ),
                                         )
                                       ],
                                     ),
-                                  ),
-                                  //latestNews
-                                  Padding(
-                                    padding: const EdgeInsets.all(12.0),
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: Colors.white38,
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          SizedBox(
-                                            height: 10,
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    //construction section
+                                    Column(
+                                      children: [
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 12.0),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                'Construction',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              SizedBox(
+                                                width: 80,
+                                              ),
+                                              Text(
+                                                'View All',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    color: Colors.blue),
+                                              )
+                                            ],
                                           ),
+                                        ),
+                                        SingleChildScrollView(
+                                          scrollDirection: Axis.horizontal,
+                                          child: Row(children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: ConstructionSection(
+                                                  'images/property1.jpg',
+                                                  'Ali Construction'),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: ConstructionSection(
+                                                  'images/property2.jpg',
+                                                  'Ahmad Construction'),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: ConstructionSection(
+                                                  'images/property3.jpg',
+                                                  'Ghani Construction'),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: ConstructionSection(
+                                                  'images/property1.jpg',
+                                                  'Paracha Construction'),
+                                            ),
+                                          ]),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 12.0),
+                                      child: Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                0.92,
+                                        decoration: BoxDecoration(
+                                            color: Colors.grey[100],
+                                            borderRadius:
+                                                BorderRadius.circular(10)),
+                                        child: Column(
+                                          children: [
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                "Platinum Agencies",
+                                                style: TextStyle(
+                                                    fontSize: 18,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ),
+                                            SingleChildScrollView(
+                                              scrollDirection: Axis.horizontal,
+                                              child: Row(
+                                                children: [
+                                                  PlatinumSection(
+                                                      'images/facebook.png',
+                                                      'Mian International Karachi'),
+                                                  PlatinumSection(
+                                                      'images/instagram.png',
+                                                      'Lahore builders'),
+                                                  PlatinumSection(
+                                                      'images/twitter.png',
+                                                      'Shah International states'),
+                                                  PlatinumSection(
+                                                      'images/facebook.png',
+                                                      'Pakistan State Builders'),
+                                                ],
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+
+                                    Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: Column(
+                                        children: [
                                           Padding(
                                             padding: const EdgeInsets.all(8.0),
                                             child: Row(
@@ -937,7 +869,7 @@ class _HomeState extends State<Home> {
                                                       .spaceBetween,
                                               children: [
                                                 Text(
-                                                  'Latest News',
+                                                  'Recommended Properties',
                                                   style: TextStyle(
                                                       fontSize: 14,
                                                       fontWeight:
@@ -952,46 +884,129 @@ class _HomeState extends State<Home> {
                                               ],
                                             ),
                                           ),
-                                          Container(
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height /
-                                                  3.9,
-                                              child: SingleChildScrollView(
-                                                scrollDirection:
-                                                    Axis.horizontal,
-                                                child: Row(
-                                                  children: [
-                                                    LatestNewsSection(
-                                                        'images/property1.jpg',
-                                                        "Propert hub Oraganizes Independence Day Celebration",
-                                                        'August 14,2021'),
-                                                    SizedBox(
-                                                      width: 10,
-                                                    ),
-                                                    LatestNewsSection(
-                                                        'images/property3.jpg',
-                                                        "Propert hub Oraganizes New Year Celebration",
-                                                        'Dec 30,2021'),
-                                                    SizedBox(
-                                                      width: 10,
-                                                    ),
-                                                    LatestNewsSection(
-                                                        'images/property1.jpg',
-                                                        "Propert hub Oraganizes Independence Day Celebration",
-                                                        'August 14,2021'),
-                                                  ],
+                                          SingleChildScrollView(
+                                            scrollDirection: Axis.horizontal,
+                                            child: Row(
+                                              children: [
+                                                RecommendedSection(
+                                                    'images/property1.jpg',
+                                                    'DHA Block 9, Defence Lahore',
+                                                    '60.6Lac ',
+                                                    'Portion for Sale'),
+                                                SizedBox(
+                                                  width: 10,
                                                 ),
-                                              )),
+                                                RecommendedSection(
+                                                    'images/property3.jpg',
+                                                    'Gulshan Block 9, Lahore',
+                                                    '70.6Lac ',
+                                                    'House for Sale'),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                RecommendedSection(
+                                                    'images/property2.jpg',
+                                                    'DHA Block 9, Defence Lahore',
+                                                    '80.6Lac ',
+                                                    'Flat for Sale'),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                RecommendedSection(
+                                                    'images/property1.jpg',
+                                                    'DHA Block 9, Defence Lahore',
+                                                    '60.6Lac ',
+                                                    'House for Sale'),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                              ],
+                                            ),
+                                          )
                                         ],
                                       ),
                                     ),
-                                  ),
+                                    //latestNews
+                                    Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white38,
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                        ),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            SizedBox(
+                                              height: 10,
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
+                                                  Text(
+                                                    'Latest News',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        fontWeight:
+                                                            FontWeight.bold),
+                                                  ),
+                                                  Text(
+                                                    'View All',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        color: Colors.blue),
+                                                  )
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                                height: MediaQuery.of(context)
+                                                        .size
+                                                        .height /
+                                                    3.9,
+                                                child: SingleChildScrollView(
+                                                  scrollDirection:
+                                                      Axis.horizontal,
+                                                  child: Row(
+                                                    children: [
+                                                      LatestNewsSection(
+                                                          'images/property1.jpg',
+                                                          "Propert hub Oraganizes Independence Day Celebration",
+                                                          'August 14,2021'),
+                                                      SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      LatestNewsSection(
+                                                          'images/property3.jpg',
+                                                          "Propert hub Oraganizes New Year Celebration",
+                                                          'Dec 30,2021'),
+                                                      SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      LatestNewsSection(
+                                                          'images/property1.jpg',
+                                                          "Propert hub Oraganizes Independence Day Celebration",
+                                                          'August 14,2021'),
+                                                    ],
+                                                  ),
+                                                )),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
 
-                                  SizedBox(
-                                    height: 300,
-                                  )
-                                ],
+                                    SizedBox(
+                                      height: 300,
+                                    )
+                                  ],
+                                ),
                               )
                             ],
                           ),
