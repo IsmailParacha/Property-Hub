@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
       // body: Property(),
       body: Center(
           child: AnimatedSplashScreen(
-              duration: 3000,
+              duration: 4000,
               splashTransition: SplashTransition.fadeTransition,
               splash: Container(
                 height: 300,
