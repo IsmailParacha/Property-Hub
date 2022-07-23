@@ -28,9 +28,10 @@ class _MyAppState extends State<MyApp> {
           child: AnimatedSplashScreen(
               duration: 4000,
               splashTransition: SplashTransition.fadeTransition,
+              splashIconSize: 200,
               splash: Container(
-                height: 300,
-                width: 300,
+                height: 400,
+                width: 400,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                   image: AssetImage('images/logo2.png'),

@@ -50,8 +50,8 @@ class _HomeState extends State<Home> {
                           ),
                           Image.asset(
                             'images/logo2.png',
-                            height: 40,
-                            width: 40,
+                            height: 45,
+                            width: 45,
                           )
                         ],
                       ),
@@ -61,12 +61,12 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                       Container(
-                          margin: EdgeInsets.only(left: 15),
-                          width: 300,
+                          margin: EdgeInsets.only(left: 14),
+                          width: 325,
                           height: 40,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Colors.white60),
+                              color: Colors.black45),
                           child: TabBar(
                             indicator: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
