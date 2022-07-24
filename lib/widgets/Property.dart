@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../Screen/new_project.dart';
-import 'platinum.dart';
 
 class Propertysection extends StatelessWidget {
   final String imagelink;

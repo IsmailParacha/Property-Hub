@@ -1,10 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:property/Dashboard/Dashboard.dart';
-import 'package:property/widgets/Property.dart';
-
-import 'Dashboard/home.dart';
-import 'Screen/firstscreen.dart';
 
 void main() async {
   runApp(new MaterialApp(

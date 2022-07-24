@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property/Screen/Search.dart';
 import 'package:property/widgets/ConstructionSection.dart';
 import 'package:property/widgets/ExclusiveSection.dart';
 import 'package:property/widgets/LatestNews.dart';
@@ -97,10 +98,10 @@ class _HomeState extends State<Home> {
                         ),
                         child: InkWell(
                             onTap: () {
-                              // Navigator.push(
-                              //     context,
-                              //     MaterialPageRoute(
-                              //         builder: (context) => Search()));
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Search()));
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,

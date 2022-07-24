@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property/Screen/Search.dart';
 
 import 'fav.dart';
 import 'home.dart';
@@ -27,7 +28,10 @@ class _DashBoardState extends State<DashBoard> {
       ),
       floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.white,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Search()));
+          },
           child: Image.asset(
             "images/Logo1.jpeg",
             height: 40,

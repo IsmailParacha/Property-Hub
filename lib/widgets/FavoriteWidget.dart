@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
-import '../../Screen/new_project.dart';
 
 class FavoriteWidget extends StatelessWidget {
   final String imagelink;
