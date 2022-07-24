@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property/widgets/FavoriteWidget.dart';
 import '../screen/new_project.dart';
 
 class Fav extends StatefulWidget {
@@ -20,24 +21,26 @@ class _FavState extends State<Fav> {
         backgroundColor: Colors.white,
         iconTheme: IconThemeData.fallback(),
       ),
-      body: Stack(
+      body: ListView(
         children: [
-          ListView(
-            children: [
-              Container(
-                height: MediaQuery.of(context).size.height / 1.3,
-                child: ListView.builder(
-                    scrollDirection: Axis.vertical,
-                    itemCount: 7,
-                    itemBuilder: (
-                      BuildContext context,
-                      int p,
-                    ) {
-                      return Projects(name3[p], name4[p], img3[p]);
-                    }),
-              ),
-            ],
-          )
+          FavoriteWidget(
+            "images/property2.jpg",
+            'Twenty One Smart City',
+            'DHA Block 8,Lahore',
+            '10Lac to 50 Lac',
+          ),
+          FavoriteWidget(
+            "images/property1.jpg",
+            'Shayan Iconic Palace',
+            'Karachi Cooperative  Socaity,Karachi',
+            '1.2 Crore to 3.1 Crore',
+          ),
+          FavoriteWidget(
+            "images/property3.jpg",
+            'Al Karim Residence',
+            'H-13,Islamabad',
+            '44 Lac to 1.13 Crore',
+          ),
         ],
       ),
     );

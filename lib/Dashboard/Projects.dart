@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property/widgets/projectsScreenWidgets/Projects.dart';
 
 import '../Seller/Construction.dart';
 import '../screen/new_project.dart';
@@ -30,6 +31,7 @@ class _ProjectsState extends State<Projects> {
               height: 10,
             ),
             Container(
+                width: MediaQuery.of(context).size.width / 1.08,
                 height: 40,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -60,52 +62,333 @@ class _ProjectsState extends State<Projects> {
                   ListView(
                     scrollDirection: Axis.vertical,
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height / 1.1,
-                        child: ListView.builder(
-                            scrollDirection: Axis.vertical,
-                            itemCount: 7,
-                            itemBuilder: (
-                              BuildContext context,
-                              int p,
-                            ) {
-                              return Projects(name3[p], name4[p], img3[p]);
-                            }),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
                       ),
                     ],
                   ),
                   ListView(
                     scrollDirection: Axis.vertical,
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height / 1.3,
-                        child: ListView.builder(
-                            scrollDirection: Axis.vertical,
-                            itemCount: 7,
-                            itemBuilder: (
-                              BuildContext context,
-                              int p,
-                            ) {
-                              return Projects(name3[p], name4[p], img3[p]);
-                            }),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => NewProject()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
                       ),
                     ],
                   ),
                   ListView(
                     scrollDirection: Axis.vertical,
                     children: [
-                      Container(
-                        height: MediaQuery.of(context).size.height / 1.3,
-                        child: ListView.builder(
-                            scrollDirection: Axis.vertical,
-                            itemCount: 7,
-                            itemBuilder: (
-                              BuildContext context,
-                              int co,
-                            ) {
-                              return Construction(
-                                  name5[co], name6[co], img4[co]);
-                            }),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Constructions()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Constructions()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Constructions()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Constructions()));
+                        },
+                        child: ProjectsWidget(
+                          "images/property2.jpg",
+                          'Twenty One Smart City',
+                          'DHA Block 8,Lahore',
+                          '10Lac to 50 Lac',
+                        ),
+                      ),
+                      InkWell(
+                        child: ProjectsWidget(
+                          "images/property1.jpg",
+                          'Shayan Iconic Palace',
+                          'Karachi Cooperative  Socaity,Karachi',
+                          '1.2 Crore to 3.1 Crore',
+                        ),
+                      ),
+                      InkWell(
+                        child: ProjectsWidget(
+                          "images/property3.jpg",
+                          'Al Karim Residence',
+                          'H-13,Islamabad',
+                          '44 Lac to 1.13 Crore',
+                        ),
                       ),
                     ],
                   )

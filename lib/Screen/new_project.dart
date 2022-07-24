@@ -222,7 +222,7 @@ class _NewProjectState extends State<NewProject> {
                       ]),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height / 1.8,
+                  height: MediaQuery.of(context).size.height / 1.4,
                   child: TabBarView(
                     children: [
                       Container(
@@ -461,416 +461,448 @@ class _NewProjectState extends State<NewProject> {
                               )
                             ],
                           )),
-                      Container(
-                        margin: EdgeInsets.only(top: 10),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Project Features",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                                width: 320,
-                                height: 120,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    )),
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Main Features",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
+                      ListView(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 10),
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Project Features",
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                    width: 320,
+                                    height: 120,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        )),
+                                    child: Column(
                                       children: [
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.local_parking_rounded,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Text("Parking Space:"),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
+                                        SizedBox(
+                                          height: 5,
                                         ),
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.people_alt_rounded,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Text("Parking Space:"),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ],
-                                )),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                                width: 320,
-                                height: 120,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    )),
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Plot Features",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.nature_people_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Text("Possesion:"),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
+                                        Text(
+                                          "Main Features",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
                                         ),
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.sports_handball_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Text("Balloted:"),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
+                                        SizedBox(
+                                          height: 15,
                                         ),
-                                        Column(
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
                                           children: [
-                                            Icon(
-                                              Icons.waves_sharp,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.local_parking_rounded,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Text("Parking Space:"),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
                                             ),
-                                            Text("Sewerage:"),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ],
-                                )),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                                width: 320,
-                                height: 120,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    )),
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Business & Communication",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: [
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.vpn_lock_rounded,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Text(" Broadband Internet:"),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
-                                        ),
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.tv,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Text("Satellite or TV"),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.people_alt_rounded,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Text("Parking Space:"),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
                                             )
                                           ],
                                         ),
                                       ],
-                                    ),
-                                  ],
-                                )),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                                width: 320,
-                                height: 140,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
                                     )),
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Nearby Locations and Other Facilities",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                    width: 320,
+                                    height: 120,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        )),
+                                    child: Column(
                                       children: [
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.school_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Container(
-                                                width: 60,
-                                                child: Text(
-                                                  "Nearby Schools:",
-                                                  textAlign: TextAlign.center,
-                                                )),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
+                                        SizedBox(
+                                          height: 5,
                                         ),
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.local_hospital_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Container(
-                                                width: 65,
-                                                child: Text(
-                                                  "Nearby Hospitals:",
-                                                  textAlign: TextAlign.center,
-                                                )),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
+                                        Text(
+                                          "Plot Features",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
                                         ),
-                                        Column(
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
                                           children: [
-                                            Icon(
-                                              Icons.shopping_cart_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.nature_people_outlined,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Text("Possesion:"),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
                                             ),
-                                            Container(
-                                                width: 60,
-                                                child: Text(
-                                                  "Shopping Malls:",
-                                                  textAlign: TextAlign.center,
-                                                )),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons
+                                                      .sports_handball_outlined,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Text("Balloted:"),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
+                                            ),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.waves_sharp,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Text("Sewerage:"),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
                                             )
                                           ],
                                         ),
                                       ],
-                                    ),
-                                  ],
-                                )),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                                width: 320,
-                                height: 140,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    border: Border.all(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
                                     )),
-                                child: Column(
-                                  children: [
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      "Other Facilities",
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 15,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                    width: 320,
+                                    height: 120,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        )),
+                                    child: Column(
                                       children: [
-                                        Column(
-                                          children: [
-                                            Icon(
-                                              Icons.security,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
-                                            ),
-                                            Container(
-                                                width: 60,
-                                                child: Text(
-                                                  "Security Staff:",
-                                                  textAlign: TextAlign.center,
-                                                )),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
+                                        SizedBox(
+                                          height: 5,
                                         ),
-                                        Column(
+                                        Text(
+                                          "Business & Communication",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
                                           children: [
-                                            Icon(
-                                              Icons.photo_camera_front,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.vpn_lock_rounded,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Text(" Broadband Internet:"),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
                                             ),
-                                            Container(
-                                                width: 65,
-                                                child: Text(
-                                                  "CCTV Security:",
-                                                  textAlign: TextAlign.center,
-                                                )),
-                                            Text(
-                                              "Yes",
-                                              style: TextStyle(
-                                                  fontWeight: FontWeight.bold),
-                                            )
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.tv,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Text("Satellite or TV"),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
+                                            ),
                                           ],
                                         ),
                                       ],
-                                    ),
-                                  ],
-                                )),
-                            SizedBox(
-                              height: 20,
+                                    )),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                    width: 320,
+                                    height: 140,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        )),
+                                    child: Column(
+                                      children: [
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          "Nearby Locations and Other Facilities",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.school_outlined,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Container(
+                                                    width: 60,
+                                                    child: Text(
+                                                      "Nearby Schools:",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    )),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
+                                            ),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.local_hospital_outlined,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Container(
+                                                    width: 65,
+                                                    child: Text(
+                                                      "Nearby Hospitals:",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    )),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
+                                            ),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.shopping_cart_outlined,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Container(
+                                                    width: 60,
+                                                    child: Text(
+                                                      "Shopping Malls:",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    )),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    )),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                    width: 320,
+                                    height: 140,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        )),
+                                    child: Column(
+                                      children: [
+                                        SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          "Other Facilities",
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          height: 15,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.security,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Container(
+                                                    width: 60,
+                                                    child: Text(
+                                                      "Security Staff:",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    )),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
+                                            ),
+                                            Column(
+                                              children: [
+                                                Icon(
+                                                  Icons.photo_camera_front,
+                                                  color: Color.fromRGBO(
+                                                      57, 65, 96, 1.0),
+                                                ),
+                                                Container(
+                                                    width: 65,
+                                                    child: Text(
+                                                      "CCTV Security:",
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                    )),
+                                                Text(
+                                                  "Yes",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                )
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    )),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  height: 40,
+                                  width: 200,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  ),
+                                  child: Center(
+                                      child: Text(
+                                    'View Locations',
+                                    style: TextStyle(color: Colors.white),
+                                  )),
+                                )
+                              ],
                             ),
-                            Container(
-                              height: 40,
-                              width: 200,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                              child: Center(
-                                  child: Text(
-                                'View Locations',
-                                style: TextStyle(color: Colors.white),
-                              )),
-                            )
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 10),
@@ -1095,558 +1127,586 @@ class _NewProjectState extends State<NewProject> {
                           ],
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 10),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Property Type",
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "1 BEDS FLATS (APARTMENT FOR RENT)",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+                      ListView(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 10),
+                            child: Column(
                               children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.compare_arrows_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Area',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
+                                Text(
+                                  "Property Type",
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  ),
+                                ),
                                 SizedBox(
-                                  width: 50,
+                                  height: 10,
                                 ),
                                 Text(
-                                  "800Sq.Ft",
+                                  "1 BEDS FLATS (APARTMENT FOR RENT)",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Color.fromRGBO(57, 65, 96, 1.0),
                                   ),
                                 ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.compare_arrows_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Area',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
                                     SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.price_change_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
+                                      width: 50,
                                     ),
                                     Text(
-                                      'Price',
+                                      "800Sq.Ft",
                                       style: TextStyle(
                                         fontSize: 16,
+                                        fontWeight: FontWeight.bold,
                                         color: Color.fromRGBO(57, 65, 96, 1.0),
                                       ),
-                                    )
+                                    ),
                                   ],
-                                )),
-                                SizedBox(
-                                  width: 45,
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.price_change_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Price',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 45,
+                                    ),
+                                    Text(
+                                      "PKR 10,000",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.bed_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Bed',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                    Text(
+                                      "1",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.bathtub_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Bath',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 45,
+                                    ),
+                                    Text(
+                                      "1",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Divider(),
                                 Text(
-                                  "PKR 10,000",
+                                  "2 BEDS FLATS (APARTMENT FOR RENT)",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Color.fromRGBO(57, 65, 96, 1.0),
                                   ),
                                 ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.compare_arrows_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Area',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
                                     SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.bed_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
+                                      width: 50,
                                     ),
                                     Text(
-                                      'Bed',
+                                      "1,100Sq.Ft",
                                       style: TextStyle(
                                         fontSize: 16,
+                                        fontWeight: FontWeight.bold,
                                         color: Color.fromRGBO(57, 65, 96, 1.0),
                                       ),
-                                    )
+                                    ),
                                   ],
-                                )),
-                                SizedBox(
-                                  width: 50,
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.price_change_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Price',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 45,
+                                    ),
+                                    Text(
+                                      "PKR 15,000",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.bed_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Bed',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.bathtub_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Bath',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 45,
+                                    ),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Divider(),
                                 Text(
-                                  "1",
+                                  "2 BEDS FLATS (COTTAGES FOR RENT)",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Color.fromRGBO(57, 65, 96, 1.0),
                                   ),
                                 ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.compare_arrows_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Area',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
                                     SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.bathtub_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
+                                      width: 50,
                                     ),
                                     Text(
-                                      'Bath',
+                                      "1,400Sq.Ft",
                                       style: TextStyle(
                                         fontSize: 16,
+                                        fontWeight: FontWeight.bold,
                                         color: Color.fromRGBO(57, 65, 96, 1.0),
                                       ),
-                                    )
+                                    ),
                                   ],
-                                )),
-                                SizedBox(
-                                  width: 45,
                                 ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.price_change_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Price',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 45,
+                                    ),
+                                    Text(
+                                      "PKR 20,000",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.bed_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Bed',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 50,
+                                    ),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                        child: Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 70,
+                                        ),
+                                        Icon(
+                                          Icons.bathtub_outlined,
+                                          color:
+                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'Bath',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            color:
+                                                Color.fromRGBO(57, 65, 96, 1.0),
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                                    SizedBox(
+                                      width: 45,
+                                    ),
+                                    Text(
+                                      "2",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Divider(),
                                 Text(
-                                  "1",
+                                  'Payment Plan',
                                   style: TextStyle(
-                                    fontSize: 16,
+                                    fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                     color: Color.fromRGBO(57, 65, 96, 1.0),
                                   ),
                                 ),
+                                Image.asset(
+                                  'images/DHA.jpg',
+                                  height: 220,
+                                  width: 250,
+                                )
                               ],
                             ),
-                            Divider(),
-                            Text(
-                              "2 BEDS FLATS (APARTMENT FOR RENT)",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.compare_arrows_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Area',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 50,
-                                ),
-                                Text(
-                                  "1,100Sq.Ft",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.price_change_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Price',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 45,
-                                ),
-                                Text(
-                                  "PKR 15,000",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.bed_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Bed',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 50,
-                                ),
-                                Text(
-                                  "2",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.bathtub_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Bath',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 45,
-                                ),
-                                Text(
-                                  "2",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Divider(),
-                            Text(
-                              "2 BEDS FLATS (COTTAGES FOR RENT)",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.compare_arrows_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Area',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 50,
-                                ),
-                                Text(
-                                  "1,400Sq.Ft",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.price_change_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Price',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 45,
-                                ),
-                                Text(
-                                  "PKR 20,000",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.bed_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Bed',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 50,
-                                ),
-                                Text(
-                                  "2",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                    child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 70,
-                                    ),
-                                    Icon(
-                                      Icons.bathtub_outlined,
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Text(
-                                      'Bath',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
-                                    )
-                                  ],
-                                )),
-                                SizedBox(
-                                  width: 45,
-                                ),
-                                Text(
-                                  "2",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Divider(),
-                            Text(
-                              'Payment Plan',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                            ),
-                            Image.asset(
-                              'images/DHA.jpg',
-                              height: 220,
-                              width: 250,
-                            )
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
