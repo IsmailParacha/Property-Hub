@@ -198,7 +198,7 @@ class _ConstructionsState extends State<Constructions> {
                       ]),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height / 1.8,
+                  height: MediaQuery.of(context).size.height * 0.730,
                   child: TabBarView(
                     children: [
                       Container(
@@ -829,7 +829,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -870,7 +870,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -911,7 +911,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -1002,7 +1002,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -1043,7 +1043,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -1084,7 +1084,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -1175,7 +1175,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -1216,7 +1216,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -1257,7 +1257,7 @@ class _ConstructionsState extends State<Constructions> {
                               ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 3,
                             ),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -1297,23 +1297,23 @@ class _ConstructionsState extends State<Constructions> {
                                 ),
                               ],
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Divider(),
-                            Text(
-                              'Payment Plan',
-                              style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromRGBO(57, 65, 96, 1.0),
-                              ),
-                            ),
-                            Image.asset(
-                              'images/DHA.jpg',
-                              height: 220,
-                              width: 250,
-                            )
+                            // SizedBox(
+                            //   height: 3,
+                            // ),
+                            // Divider(),
+                            // Text(
+                            //   'Payment Plan',
+                            //   style: TextStyle(
+                            //     fontSize: 22,
+                            //     fontWeight: FontWeight.bold,
+                            //     color: Color.fromRGBO(57, 65, 96, 1.0),
+                            //   ),
+                            // ),
+                            // Image.asset(
+                            //   'images/DHA.jpg',
+                            //   height: 220,
+                            //   width: 250,
+                            // )
                           ],
                         ),
                       ),
