@@ -226,26 +226,26 @@ class _HomeState extends State<Home> {
                                                   fontWeight: FontWeight.bold),
                                             ),
                                           ),
-                                          SingleChildScrollView(
-                                            scrollDirection: Axis.horizontal,
-                                            child: Row(
-                                              children: [
-                                                PlatinumSection(
-                                                    'images/ahadbuilder.png',
-                                                    'Ahad Builder '),
-                                                PlatinumSection(
-                                                    'images/alahmad.png',
-                                                    'Al Ahmad builder'),
-                                                PlatinumSection(
-                                                    'images/dha.png',
-                                                    'DHA Multan'),
-                                                PlatinumSection(
-                                                    'images/facebook.png',
-                                                    'Pakistan State Builders'),
-                                                PlatinumSection(
-                                                    'images/bahriatown.png',
-                                                    'Pakistan State Builders'),
-                                              ],
+                                          Padding(
+                                            padding: const EdgeInsets.all(5.0),
+                                            child: SingleChildScrollView(
+                                              scrollDirection: Axis.horizontal,
+                                              child: Row(
+                                                children: [
+                                                  PlatinumSection(
+                                                      'images/ahadbuilder.png',
+                                                      'Ahad Builder '),
+                                                  PlatinumSection(
+                                                      'images/dha.png',
+                                                      'DHA Multan'),
+                                                  PlatinumSection(
+                                                      'images/bahriatown.png',
+                                                      'Bahria Town Karachi'),
+                                                  PlatinumSection(
+                                                      'images/alahmad.png',
+                                                      'Al Ahmad builder'),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],
@@ -491,23 +491,26 @@ class _HomeState extends State<Home> {
                                                   fontWeight: FontWeight.bold),
                                             ),
                                           ),
-                                          SingleChildScrollView(
-                                            scrollDirection: Axis.horizontal,
-                                            child: Row(
-                                              children: [
-                                                PlatinumSection(
-                                                    'images/facebook.png',
-                                                    'Mian International Karachi'),
-                                                PlatinumSection(
-                                                    'images/instagram.png',
-                                                    'Lahore builders'),
-                                                PlatinumSection(
-                                                    'images/twitter.png',
-                                                    'Shah International states'),
-                                                PlatinumSection(
-                                                    'images/facebook.png',
-                                                    'Pakistan State Builders'),
-                                              ],
+                                          Padding(
+                                            padding: const EdgeInsets.all(3.0),
+                                            child: SingleChildScrollView(
+                                              scrollDirection: Axis.horizontal,
+                                              child: Row(
+                                                children: [
+                                                  PlatinumSection(
+                                                      'images/ahadbuilder.png',
+                                                      'Ahad Builder '),
+                                                  PlatinumSection(
+                                                      'images/dha.png',
+                                                      'DHA Multan'),
+                                                  PlatinumSection(
+                                                      'images/bahriatown.png',
+                                                      'Bahria Town Karachi'),
+                                                  PlatinumSection(
+                                                      'images/alahmad.png',
+                                                      'Al Ahmad builder'),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],
@@ -837,23 +840,28 @@ class _HomeState extends State<Home> {
                                                         FontWeight.bold),
                                               ),
                                             ),
-                                            SingleChildScrollView(
-                                              scrollDirection: Axis.horizontal,
-                                              child: Row(
-                                                children: [
-                                                  PlatinumSection(
-                                                      'images/facebook.png',
-                                                      'Mian International Karachi'),
-                                                  PlatinumSection(
-                                                      'images/instagram.png',
-                                                      'Lahore builders'),
-                                                  PlatinumSection(
-                                                      'images/twitter.png',
-                                                      'Shah International states'),
-                                                  PlatinumSection(
-                                                      'images/facebook.png',
-                                                      'Pakistan State Builders'),
-                                                ],
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(5.0),
+                                              child: SingleChildScrollView(
+                                                scrollDirection:
+                                                    Axis.horizontal,
+                                                child: Row(
+                                                  children: [
+                                                    PlatinumSection(
+                                                        'images/ahadbuilder.png',
+                                                        'Ahad Builder '),
+                                                    PlatinumSection(
+                                                        'images/dha.png',
+                                                        'DHA Multan'),
+                                                    PlatinumSection(
+                                                        'images/bahriatown.png',
+                                                        'Bahria Town Karachi'),
+                                                    PlatinumSection(
+                                                        'images/alahmad.png',
+                                                        'Al Ahmad builder'),
+                                                  ],
+                                                ),
                                               ),
                                             ),
                                           ],

@@ -22,9 +22,7 @@ class PlatinumSection extends StatelessWidget {
           ),
           Text(
             '$name',
-            style: TextStyle(
-              fontSize: 10,
-            ),
+            style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
           ),
           SizedBox(
             height: 5.0,
