@@ -231,16 +231,19 @@ class _HomeState extends State<Home> {
                                             child: Row(
                                               children: [
                                                 PlatinumSection(
+                                                    'images/ahadbuilder.png',
+                                                    'Ahad Builder '),
+                                                PlatinumSection(
+                                                    'images/alahmad.png',
+                                                    'Al Ahmad builder'),
+                                                PlatinumSection(
+                                                    'images/dha.png',
+                                                    'DHA Multan'),
+                                                PlatinumSection(
                                                     'images/facebook.png',
-                                                    'Mian International Karachi'),
+                                                    'Pakistan State Builders'),
                                                 PlatinumSection(
-                                                    'images/instagram.png',
-                                                    'Lahore builders'),
-                                                PlatinumSection(
-                                                    'images/twitter.png',
-                                                    'Shah International states'),
-                                                PlatinumSection(
-                                                    'images/facebook.png',
+                                                    'images/bahriatown.png',
                                                     'Pakistan State Builders'),
                                               ],
                                             ),
