@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:property/Login/login.dart';
 
 import '../DashBoard/Dashboard.dart';
-import 'signin.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({Key? key}) : super(key: key);
+class NewAccount extends StatefulWidget {
+  const NewAccount({Key? key}) : super(key: key);
 
   @override
-  _SignUpState createState() => _SignUpState();
+  State createState() => _NewAccountState();
 }
 
-class _SignUpState extends State<SignUp> {
+final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+String p =
+    r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+
+RegExp regExp = new RegExp(p);
+
+class _NewAccountState extends State<NewAccount> {
   bool isChecked = false;
   Color getColor(Set<MaterialState> states) {
     const Set<MaterialState> interactiveStates = <MaterialState>{
@@ -24,6 +30,9 @@ class _SignUpState extends State<SignUp> {
     return Colors.white;
   }
 
+  bool _isObscure = true;
+  bool value = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,31 +41,90 @@ class _SignUpState extends State<SignUp> {
         children: [
           ListView(
             children: [
-              Column(
-                children: [
-                  Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 80),
-                      child: Text(
-                        'Sign In',
-                        style: TextStyle(
-                            fontSize: 35.0,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w300),
+              Form(
+                key: _formkey,
+                child: Column(
+                  children: [
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 18),
+                        child: Text(
+                          'Sign Up',
+                          style: TextStyle(
+                              fontSize: 35.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w300),
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(
-                      left: 30,
-                      right: 30,
+                    SizedBox(
+                      height: 5,
                     ),
-                    child: TextField(
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 30,
+                        right: 30,
+                      ),
+                      child: TextFormField(
+                          validator: (value) {
+                            if (value != null && value != "") {
+                              if (value.length < 6) {
+                                return "Username length should be atleast 6";
+                              } else {
+                                return null;
+                              }
+                            } else {
+                              return "Username cannot be empty";
+                            }
+                          },
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                          decoration: InputDecoration(
+                              errorStyle: TextStyle(
+                                  color: Color.fromARGB(255, 248, 152, 145)),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(255, 182, 0, 1.0)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
+                              ),
+                              labelText: 'Name',
+                              labelStyle: TextStyle(color: Colors.grey),
+                              prefixIcon: Icon(Icons.mail,
+                                  color: Color.fromRGBO(255, 182, 0, 1.0)),
+                              hintStyle: TextStyle(color: Colors.white60),
+                              hintText: 'Enter Your Name')),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 30,
+                        right: 30,
+                      ),
+                      child: TextFormField(
+                        validator: (value) {
+                          if (value != null && value != "") {
+                            if (!regExp.hasMatch(value)) {
+                              return "Email is invalid";
+                            } else {
+                              return null;
+                            }
+                          } else {
+                            return "Email cannot be empty";
+                          }
+                        },
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
+                            errorStyle: TextStyle(
+                                color: Color.fromARGB(255, 248, 152, 145)),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
                               borderRadius:
@@ -73,154 +141,235 @@ class _SignUpState extends State<SignUp> {
                             prefixIcon: Icon(Icons.mail,
                                 color: Color.fromRGBO(255, 182, 0, 1.0)),
                             hintStyle: TextStyle(color: Colors.white60),
-                            hintText: 'Enter Your Email')),
-                  ),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(
-                      left: 30,
-                      right: 30,
+                            hintText: 'Enter Your Email'),
+                      ),
                     ),
-                    child: TextField(
-                        obscureText: true,
-                        style: TextStyle(color: Colors.white),
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.white),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(5.0)),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 30,
+                        right: 30,
+                      ),
+                      child: TextFormField(
+                          obscureText: true,
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            errorStyle: TextStyle(
+                                color: Color.fromARGB(255, 248, 152, 145)),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.white),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5.0)),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color.fromRGBO(255, 182, 0, 1.0)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5.0)),
+                            ),
+                            labelText: 'Password',
+                            labelStyle: TextStyle(color: Colors.grey),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _isObscure
+                                    ? Icons.visibility
+                                    : Icons.visibility_off,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  _isObscure = !_isObscure;
+                                });
+                              },
+                            ),
+                            prefixIcon: Icon(Icons.lock,
                                 color: Color.fromRGBO(255, 182, 0, 1.0)),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(5.0)),
-                          ),
-                          labelText: 'Password',
-                          labelStyle: TextStyle(color: Colors.grey),
-                          prefixIcon: Icon(Icons.lock,
-                              color: Color.fromRGBO(255, 182, 0, 1.0)),
-                          hintStyle: TextStyle(color: Colors.white60),
-                          hintText: 'Enter Your Password',
-                        )),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: 18,
+                            hintStyle: TextStyle(color: Colors.white60),
+                            hintText: 'Enter Your Password',
+                          )),
                     ),
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.white),
+                    SizedBox(
+                      height: 10,
                     ),
-                  ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 15,
+                    Container(
+                      padding: EdgeInsets.only(
+                        left: 30,
+                        right: 30,
                       ),
-                      Checkbox(
-                        activeColor: Colors.black,
-                        checkColor: Colors.black,
-                        fillColor: MaterialStateProperty.resolveWith(getColor),
-                        value: isChecked,
-                        onChanged: (bool? value) {
-                          setState(() {
-                            isChecked = value!;
-                          });
-                        },
-                      ),
-                      Text(
-                        'Remember me',
-                        style: TextStyle(color: Colors.white60),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  InkWell(
-                    child: Container(
-                      height: 50,
-                      width: 250,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 182, 0, 1.0),
-                          borderRadius: BorderRadius.circular(70)),
-                      child: Center(
-                        child: Text(
-                          'LOGIN',
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500),
+                      child: TextFormField(
+                          style: TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                              errorStyle: TextStyle(
+                                  color: Color.fromARGB(255, 248, 152, 145)),
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(255, 182, 0, 1.0)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
+                              ),
+                              labelText: 'Phone No',
+                              labelStyle: TextStyle(color: Colors.grey),
+                              prefixIcon: Icon(Icons.phone,
+                                  color: Color.fromRGBO(255, 182, 0, 1.0)),
+                              hintStyle: TextStyle(color: Colors.white60),
+                              hintText: 'Enter Your Phone Number')),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(
+                          width: 16,
                         ),
+                        Checkbox(
+                          activeColor: Colors.black,
+                          checkColor: Colors.black,
+                          fillColor:
+                              MaterialStateProperty.resolveWith(getColor),
+                          value: isChecked,
+                          onChanged: (bool? value) {
+                            setState(() {
+                              isChecked = value!;
+                            });
+                          },
+                        ),
+                        Text(
+                          'Remember me',
+                          style: TextStyle(color: Colors.white60),
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'All fields are required.',
+                            style: TextStyle(color: Colors.white, fontSize: 12),
+                          ),
+                          Container(
+                            child: RichText(
+                              text: TextSpan(
+                                style: TextStyle(
+                                    height: 1.6,
+                                    color: Colors.white,
+                                    fontSize: 12),
+                                children: [
+                                  TextSpan(
+                                      text: 'By Pressing "SUBMIT" I declare  '),
+                                  TextSpan(
+                                      text:
+                                          'that I have read and I agree to the PropertyHub.com'),
+                                  TextSpan(
+                                      text: " Terms & Conditions.",
+                                      style: TextStyle(color: Colors.blue)),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                        ],
                       ),
                     ),
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DashBoard()));
-                    },
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    '- OR -',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.grey,
+                    SizedBox(
+                      height: 5,
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    'Sign in with',
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
+                    InkWell(
+                      child: Container(
                         height: 50,
-                        width: 50,
+                        width: 250,
                         decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(90)),
+                            color: Color.fromRGBO(255, 182, 0, 1.0),
+                            borderRadius: BorderRadius.circular(70)),
                         child: Center(
                           child: Text(
-                            'f',
+                            'SUBMIT',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 40),
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
                       ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('images/google.png'),
-                                fit: BoxFit.cover),
-                            borderRadius: BorderRadius.circular(90)),
+                      onTap: () {
+                        if (_formkey.currentState!.validate()) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Processing Data')),
+                          );
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DashBoard()));
+                        }
+                      },
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      '- OR -',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.grey,
                       ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'Sign in with',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(90)),
+                          child: Center(
+                            child: Text(
+                              'f',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 40),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('images/google.png'),
+                                  fit: BoxFit.cover),
+                              borderRadius: BorderRadius.circular(90)),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                       Text(
-                        "Don't have an Account?",
+                        "Already have an account?",
                         style: TextStyle(
                           fontSize: 15,
                           color: Colors.grey,
@@ -228,22 +377,23 @@ class _SignUpState extends State<SignUp> {
                       ),
                       InkWell(
                         child: Text(
-                          " Sign Up",
+                          " Sign In",
                           style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
                           ),
                         ),
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => NewAccount()));
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Login()));
                         },
-                      )
-                    ],
-                  )
-                ],
+                      ),
+                    ]),
+                    SizedBox(
+                      height: 5,
+                    ),
+                  ],
+                ),
               )
             ],
           )

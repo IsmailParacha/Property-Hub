@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../Login/SignUp.dart';
+import 'package:property/Login/login.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -41,7 +40,7 @@ class _ProfileState extends State<Profile> {
                   ),
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignUp()));
+                        MaterialPageRoute(builder: (context) => Login()));
                   },
                 ),
               )
