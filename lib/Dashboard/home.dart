@@ -227,7 +227,11 @@ class _HomeState extends State<Home> {
                                             ),
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.all(5.0),
+                                            padding: const EdgeInsets.only(
+                                                top: 0.0,
+                                                bottom: 0.0,
+                                                right: 5.0,
+                                                left: 5.0),
                                             child: SingleChildScrollView(
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
@@ -492,7 +496,8 @@ class _HomeState extends State<Home> {
                                             ),
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.all(3.0),
+                                            padding: const EdgeInsets.only(
+                                                right: 5.0, left: 5.0),
                                             child: SingleChildScrollView(
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
@@ -841,8 +846,8 @@ class _HomeState extends State<Home> {
                                               ),
                                             ),
                                             Padding(
-                                              padding:
-                                                  const EdgeInsets.all(5.0),
+                                              padding: const EdgeInsets.only(
+                                                  left: 5.0, right: 5.0),
                                               child: SingleChildScrollView(
                                                 scrollDirection:
                                                     Axis.horizontal,

@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:property/Login/login.dart';
 
 import '../DashBoard/Dashboard.dart';
+import 'login.dart';
 
 class NewAccount extends StatefulWidget {
   const NewAccount({Key? key}) : super(key: key);
 
   @override
-  State createState() => _NewAccountState();
+  _NewAccountState createState() => _NewAccountState();
 }
-
-final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-String p =
-    r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
-
-RegExp regExp = new RegExp(p);
 
 class _NewAccountState extends State<NewAccount> {
   bool isChecked = false;
@@ -33,17 +27,19 @@ class _NewAccountState extends State<NewAccount> {
   bool _isObscure = true;
   bool value = false;
 
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(57, 65, 96, 1.0),
-      body: Stack(
-        children: [
-          ListView(
-            children: [
-              Form(
-                key: _formkey,
-                child: Column(
+      body: Form(
+        key: _formKey,
+        child: Stack(
+          children: [
+            ListView(
+              children: [
+                Column(
                   children: [
                     Center(
                       child: Padding(
@@ -67,15 +63,10 @@ class _NewAccountState extends State<NewAccount> {
                       ),
                       child: TextFormField(
                           validator: (value) {
-                            if (value != null && value != "") {
-                              if (value.length < 6) {
-                                return "Username length should be atleast 6";
-                              } else {
-                                return null;
-                              }
-                            } else {
-                              return "Username cannot be empty";
+                            if (value == null || value.isEmpty) {
+                              return "Please enter some text User Can't be empthy";
                             }
+                            return null;
                           },
                           style: TextStyle(
                             color: Colors.white,
@@ -110,21 +101,8 @@ class _NewAccountState extends State<NewAccount> {
                         right: 30,
                       ),
                       child: TextFormField(
-                        validator: (value) {
-                          if (value != null && value != "") {
-                            if (!regExp.hasMatch(value)) {
-                              return "Email is invalid";
-                            } else {
-                              return null;
-                            }
-                          } else {
-                            return "Email cannot be empty";
-                          }
-                        },
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                            errorStyle: TextStyle(
-                                color: Color.fromARGB(255, 248, 152, 145)),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
                               borderRadius:
@@ -152,12 +130,10 @@ class _NewAccountState extends State<NewAccount> {
                         left: 30,
                         right: 30,
                       ),
-                      child: TextFormField(
+                      child: TextField(
                           obscureText: true,
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
-                            errorStyle: TextStyle(
-                                color: Color.fromARGB(255, 248, 152, 145)),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
                               borderRadius:
@@ -198,11 +174,9 @@ class _NewAccountState extends State<NewAccount> {
                         left: 30,
                         right: 30,
                       ),
-                      child: TextFormField(
+                      child: TextField(
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
-                              errorStyle: TextStyle(
-                                  color: Color.fromARGB(255, 248, 152, 145)),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
                                 borderRadius:
@@ -277,9 +251,6 @@ class _NewAccountState extends State<NewAccount> {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 5,
-                          ),
                         ],
                       ),
                     ),
@@ -304,7 +275,7 @@ class _NewAccountState extends State<NewAccount> {
                         ),
                       ),
                       onTap: () {
-                        if (_formkey.currentState!.validate()) {
+                        if (_formKey.currentState!.validate()) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Processing Data')),
                           );
@@ -393,11 +364,11 @@ class _NewAccountState extends State<NewAccount> {
                       height: 5,
                     ),
                   ],
-                ),
-              )
-            ],
-          )
-        ],
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
