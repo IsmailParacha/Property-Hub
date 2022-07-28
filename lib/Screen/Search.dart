@@ -321,14 +321,14 @@ class _SearchState extends State<Search> {
                                         width: 85,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(25),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -336,14 +336,16 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.home_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
+                                              // color: Color.fromRGBO(
+                                              //     57, 65, 96, 1.0),
                                             ),
                                             Text(
                                               'House',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
+                                                color: Colors.black,
+                                                // color: Color.fromRGBO(
+                                                //     57, 65, 96, 1.0),
                                               ),
                                             )
                                           ],
@@ -356,14 +358,14 @@ class _SearchState extends State<Search> {
                                         width: 70,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -371,14 +373,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.home_work_rounded,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Flate',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
+                                                color: Colors.black,
+                                                // color: Color.fromRGBO(
+                                                //     57, 65, 96, 1.0),
                                               ),
                                             )
                                           ],
@@ -391,14 +393,14 @@ class _SearchState extends State<Search> {
                                         width: 120,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -406,14 +408,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.apartment_sharp,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Upper Portion',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
+                                                color: Colors.black,
+                                                // color: Color.fromRGBO(
+                                                //     57, 65, 96, 1.0),
                                               ),
                                             )
                                           ],
@@ -426,14 +428,14 @@ class _SearchState extends State<Search> {
                                         width: 120,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -441,14 +443,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.apartment_sharp,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Lower Portion',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
+                                                color: Colors.black,
+                                                // color: Color.fromRGBO(
+                                                //     57, 65, 96, 1.0),
                                               ),
                                             )
                                           ],
@@ -461,14 +463,14 @@ class _SearchState extends State<Search> {
                                         width: 110,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -476,14 +478,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.water_damage_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Farm House',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
+                                                color: Colors.black,
+                                                // color: Color.fromRGBO(
+                                                //     57, 65, 96, 1.0),
                                               ),
                                             )
                                           ],
@@ -496,14 +498,14 @@ class _SearchState extends State<Search> {
                                         width: 80,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -511,14 +513,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.door_back_door_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Room',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
+                                                color: Colors.black,
+                                                // color: Color.fromRGBO(
+                                                //     57, 65, 96, 1.0),
                                               ),
                                             )
                                           ],
@@ -531,14 +533,14 @@ class _SearchState extends State<Search> {
                                         width: 110,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -546,15 +548,12 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.account_balance_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Penthouse',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -610,14 +609,14 @@ class _SearchState extends State<Search> {
                                         width: 140,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -625,15 +624,15 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.home_work_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Residential Plot',
-                                              style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                              style:
+                                                  TextStyle(color: Colors.black
+                                                      // color: Color.fromRGBO(
+                                                      //     57, 65, 96, 1.0),
+                                                      ),
                                             )
                                           ],
                                         ),
@@ -645,14 +644,14 @@ class _SearchState extends State<Search> {
                                         width: 140,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -660,15 +659,15 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.home_work_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Commercial Plot',
-                                              style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                              style:
+                                                  TextStyle(color: Colors.black
+                                                      // color: Color.fromRGBO(
+                                                      //     57, 65, 96, 1.0),
+                                                      ),
                                             )
                                           ],
                                         ),
@@ -680,14 +679,14 @@ class _SearchState extends State<Search> {
                                         width: 140,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -695,15 +694,12 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.home_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Agricultural Land',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -715,14 +711,14 @@ class _SearchState extends State<Search> {
                                         width: 100,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -730,15 +726,12 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.file_copy_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Plot File',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -750,14 +743,14 @@ class _SearchState extends State<Search> {
                                         width: 100,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -765,15 +758,12 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.upload_file,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Plot Form',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -829,14 +819,14 @@ class _SearchState extends State<Search> {
                                         width: 80,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -844,15 +834,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.home_work_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
+                                              // color: Color.fromRGBO(
+                                              //     57, 65, 96, 1.0),
                                             ),
                                             Text(
                                               'Office',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -864,14 +853,14 @@ class _SearchState extends State<Search> {
                                         width: 70,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -879,15 +868,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.shopping_bag_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
+                                              // color: Color.fromRGBO(
+                                              //     57, 65, 96, 1.0),
                                             ),
                                             Text(
                                               'Shop',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -899,14 +887,14 @@ class _SearchState extends State<Search> {
                                         width: 120,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -914,15 +902,12 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.account_balance_outlined,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Warehouse',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -934,14 +919,14 @@ class _SearchState extends State<Search> {
                                         width: 100,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -949,15 +934,12 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.apartment,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Factory',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -969,14 +951,14 @@ class _SearchState extends State<Search> {
                                         width: 110,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -984,15 +966,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.apartment_sharp,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              // color: Color.fromRGBO(
+                                              //     57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Farm House',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -1004,14 +985,14 @@ class _SearchState extends State<Search> {
                                         width: 80,
                                         height: 35,
                                         decoration: BoxDecoration(
-                                          border: Border.all(
-                                            color:
-                                                Color.fromRGBO(57, 65, 96, 1.0),
-                                          ),
+                                          // border: Border.all(
+                                          //   color:
+                                          //       Color.fromRGBO(57, 65, 96, 1.0),
+                                          // ),
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 0.2),
+                                          color: Color.fromRGBO(
+                                              172, 178, 202, 0.2),
                                         ),
                                         child: Row(
                                           mainAxisAlignment:
@@ -1019,15 +1000,14 @@ class _SearchState extends State<Search> {
                                           children: [
                                             Icon(
                                               Icons.add,
-                                              color: Color.fromRGBO(
-                                                  57, 65, 96, 1.0),
+                                              // color: Color.fromRGBO(
+                                              //     57, 65, 96, 1.0),
+                                              color: Colors.grey,
                                             ),
                                             Text(
                                               'Room',
                                               style: TextStyle(
-                                                color: Color.fromRGBO(
-                                                    57, 65, 96, 1.0),
-                                              ),
+                                                  color: Colors.black),
                                             )
                                           ],
                                         ),
@@ -1519,35 +1499,33 @@ class _SearchState extends State<Search> {
                                 width: 35,
                                 height: 35,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
+                                  // border: Border.all(
+                                  //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  // ),
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Color.fromRGBO(57, 65, 96, 0.2),
+                                  color: Color.fromRGBO(172, 178, 202, 0.2),
                                 ),
                                 child: Center(
                                   child: Text(
                                     '1',
-                                    style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
+                                    style: TextStyle(color: Colors.black),
                                   ),
                                 )),
                             Container(
                                 width: 35,
                                 height: 35,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
+                                  // border: Border.all(
+                                  //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  // ),
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Color.fromRGBO(57, 65, 96, 0.2),
+                                  color: Color.fromRGBO(172, 178, 202, 0.2),
                                 ),
                                 child: Center(
                                   child: Text(
                                     '2',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   ),
                                 )),
@@ -1555,17 +1533,17 @@ class _SearchState extends State<Search> {
                                 width: 35,
                                 height: 35,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
+                                  // border: Border.all(
+                                  //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  // ),
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Color.fromRGBO(57, 65, 96, 0.2),
+                                  color: Color.fromRGBO(172, 178, 202, 0.2),
                                 ),
                                 child: Center(
                                   child: Text(
                                     '3',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   ),
                                 )),
@@ -1573,17 +1551,17 @@ class _SearchState extends State<Search> {
                                 width: 35,
                                 height: 35,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
+                                  // border: Border.all(
+                                  //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  // ),
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Color.fromRGBO(57, 65, 96, 0.2),
+                                  color: Color.fromRGBO(172, 178, 202, 0.2),
                                 ),
                                 child: Center(
                                   child: Text(
                                     '4',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   ),
                                 )),
@@ -1591,11 +1569,11 @@ class _SearchState extends State<Search> {
                               width: 35,
                               height: 35,
                               decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Color.fromRGBO(57, 65, 96, 1.0),
-                                ),
+                                // border: Border.all(
+                                //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                // ),
                                 borderRadius: BorderRadius.circular(20),
-                                color: Color.fromRGBO(57, 65, 96, 0.2),
+                                color: Color.fromRGBO(172, 178, 202, 0.2),
                               ),
                               child: Row(
                                 mainAxisAlignment:
@@ -1604,7 +1582,7 @@ class _SearchState extends State<Search> {
                                   Text(
                                     '5',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   )
                                 ],
@@ -1625,11 +1603,11 @@ class _SearchState extends State<Search> {
                                   width: 35,
                                   height: 35,
                                   decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    ),
+                                    // border: Border.all(
+                                    //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                    // ),
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Color.fromRGBO(57, 65, 96, 0.2),
+                                    color: Color.fromRGBO(172, 178, 202, 0.2),
                                   ),
                                   child: Row(
                                     mainAxisAlignment:
@@ -1638,8 +1616,7 @@ class _SearchState extends State<Search> {
                                       Text(
                                         '6',
                                         style: TextStyle(
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                          color: Colors.black,
                                         ),
                                       )
                                     ],
@@ -1649,18 +1626,17 @@ class _SearchState extends State<Search> {
                                     width: 35,
                                     height: 35,
                                     decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
+                                      // border: Border.all(
+                                      //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      // ),
                                       borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromRGBO(57, 65, 96, 0.2),
+                                      color: Color.fromRGBO(172, 178, 202, 0.2),
                                     ),
                                     child: Center(
                                       child: Text(
                                         '7',
                                         style: TextStyle(
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                          color: Colors.black,
                                         ),
                                       ),
                                     )),
@@ -1668,18 +1644,17 @@ class _SearchState extends State<Search> {
                                     width: 35,
                                     height: 35,
                                     decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
+                                      // border: Border.all(
+                                      //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      // ),
                                       borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromRGBO(57, 65, 96, 0.2),
+                                      color: Color.fromRGBO(172, 178, 202, 0.2),
                                     ),
                                     child: Center(
                                       child: Text(
                                         '8',
                                         style: TextStyle(
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                          color: Colors.black,
                                         ),
                                       ),
                                     )),
@@ -1687,18 +1662,17 @@ class _SearchState extends State<Search> {
                                     width: 35,
                                     height: 35,
                                     decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
+                                      // border: Border.all(
+                                      //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      // ),
                                       borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromRGBO(57, 65, 96, 0.2),
+                                      color: Color.fromRGBO(172, 178, 202, 0.2),
                                     ),
                                     child: Center(
                                       child: Text(
                                         '9',
                                         style: TextStyle(
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                          color: Colors.black,
                                         ),
                                       ),
                                     )),
@@ -1706,18 +1680,17 @@ class _SearchState extends State<Search> {
                                     width: 35,
                                     height: 35,
                                     decoration: BoxDecoration(
-                                      border: Border.all(
-                                        color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      ),
+                                      // border: Border.all(
+                                      //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      // ),
                                       borderRadius: BorderRadius.circular(20),
-                                      color: Color.fromRGBO(57, 65, 96, 0.2),
+                                      color: Color.fromRGBO(172, 178, 202, 0.2),
                                     ),
                                     child: Center(
                                       child: Text(
                                         '+10',
                                         style: TextStyle(
-                                          color:
-                                              Color.fromRGBO(57, 65, 96, 1.0),
+                                          color: Colors.black,
                                         ),
                                       ),
                                     )),
@@ -1760,17 +1733,17 @@ class _SearchState extends State<Search> {
                               width: 35,
                               height: 35,
                               decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Color.fromRGBO(57, 65, 96, 1.0),
-                                ),
+                                // border: Border.all(
+                                //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                // ),
                                 borderRadius: BorderRadius.circular(20),
-                                color: Color.fromRGBO(57, 65, 96, 0.2),
+                                color: Color.fromRGBO(172, 178, 202, 0.2),
                               ),
                               child: Center(
                                 child: Text(
                                   '1',
                                   style: TextStyle(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                    color: Colors.black,
                                   ),
                                 ),
                               ),
@@ -1779,17 +1752,17 @@ class _SearchState extends State<Search> {
                                 width: 35,
                                 height: 35,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
+                                  // border: Border.all(
+                                  //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  // ),
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Color.fromRGBO(57, 65, 96, 0.2),
+                                  color: Color.fromRGBO(172, 178, 202, 0.2),
                                 ),
                                 child: Center(
                                   child: Text(
                                     '2',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   ),
                                 )),
@@ -1815,17 +1788,17 @@ class _SearchState extends State<Search> {
                                 width: 35,
                                 height: 35,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
+                                  // border: Border.all(
+                                  //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  // ),
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Color.fromRGBO(57, 65, 96, 0.2),
+                                  color: Color.fromRGBO(172, 178, 202, 0.2),
                                 ),
                                 child: Center(
                                   child: Text(
                                     '4',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   ),
                                 )),
@@ -1833,17 +1806,17 @@ class _SearchState extends State<Search> {
                                 width: 35,
                                 height: 35,
                                 decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  ),
+                                  // border: Border.all(
+                                  //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  // ),
                                   borderRadius: BorderRadius.circular(20),
-                                  color: Color.fromRGBO(57, 65, 96, 0.2),
+                                  color: Color.fromRGBO(172, 178, 202, 0.2),
                                 ),
                                 child: Center(
                                   child: Text(
                                     '5',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   ),
                                 )),
@@ -1851,11 +1824,11 @@ class _SearchState extends State<Search> {
                               width: 35,
                               height: 35,
                               decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Color.fromRGBO(57, 65, 96, 1.0),
-                                ),
+                                // border: Border.all(
+                                //   color: Color.fromRGBO(57, 65, 96, 1.0),
+                                // ),
                                 borderRadius: BorderRadius.circular(20),
-                                color: Color.fromRGBO(57, 65, 96, 0.2),
+                                color: Color.fromRGBO(172, 178, 202, 0.2),
                               ),
                               child: Row(
                                 mainAxisAlignment:
@@ -1864,7 +1837,7 @@ class _SearchState extends State<Search> {
                                   Text(
                                     '+6',
                                     style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      color: Colors.black,
                                     ),
                                   )
                                 ],
