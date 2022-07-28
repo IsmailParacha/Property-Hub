@@ -19,7 +19,10 @@ class _ProfileState extends State<Profile> {
               SizedBox(
                 height: 150,
               ),
-              Image.asset('images/logo2.png'),
+              Container(
+                  width: 250,
+                  height: 250,
+                  child: Image.asset('images/logo2.png')),
               Center(
                 child: InkWell(
                   child: Container(

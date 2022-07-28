@@ -222,7 +222,7 @@ class _NewProjectState extends State<NewProject> {
                       ]),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height / 1.4,
+                  height: MediaQuery.of(context).size.height / 1.7,
                   child: TabBarView(
                     children: [
                       Container(
@@ -464,7 +464,7 @@ class _NewProjectState extends State<NewProject> {
                       ListView(
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 10),
+                            margin: EdgeInsets.only(top: 10, bottom: 10),
                             child: Column(
                               children: [
                                 Text(
