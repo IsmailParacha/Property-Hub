@@ -55,7 +55,7 @@ class _ProjectsState extends State<Projects> {
                   ],
                 )),
             Container(
-              height: MediaQuery.of(context).size.height / 1.4,
+              height: MediaQuery.of(context).size.height / 1.3,
               width: MediaQuery.of(context).size.width,
               child: TabBarView(
                 children: [
