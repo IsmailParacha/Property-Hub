@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../DashBoard/Dashboard.dart';
+import '../main.dart';
 import 'signup.dart';
 
 class Login extends StatefulWidget {
@@ -22,6 +24,15 @@ class _LoginState extends State<Login> {
       return Colors.white;
     }
     return Colors.white;
+  }
+
+  final emailcontroller = TextEditingController();
+  final passwordcontroller = TextEditingController();
+  @override
+  void dispose() {
+    emailcontroller.dispose();
+    passwordcontroller.dispose();
+    super.dispose();
   }
 
   @override
@@ -55,6 +66,7 @@ class _LoginState extends State<Login> {
                       right: 30,
                     ),
                     child: TextField(
+                        controller: emailcontroller,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
@@ -84,6 +96,7 @@ class _LoginState extends State<Login> {
                       right: 30,
                     ),
                     child: TextField(
+                        controller: passwordcontroller,
                         obscureText: true,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
@@ -141,27 +154,28 @@ class _LoginState extends State<Login> {
                     height: 20,
                   ),
                   InkWell(
-                    child: Container(
-                      height: 50,
-                      width: 250,
-                      decoration: BoxDecoration(
-                          color: Color.fromRGBO(255, 182, 0, 1.0),
-                          borderRadius: BorderRadius.circular(70)),
-                      child: Center(
-                        child: Text(
-                          'LOGIN',
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500),
+                      child: Container(
+                        height: 50,
+                        width: 250,
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(255, 182, 0, 1.0),
+                            borderRadius: BorderRadius.circular(70)),
+                        child: Center(
+                          child: Text(
+                            'LOGIN',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500),
+                          ),
                         ),
                       ),
-                    ),
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => DashBoard()));
-                    },
-                  ),
+                      onTap: sigIn
+                      //  () {
+                      //   // Navigator.push(context,
+                      //   //     MaterialPageRoute(builder: (context) => DashBoard()));
+                      // },
+                      ),
                   SizedBox(
                     height: 10,
                   ),
@@ -250,5 +264,22 @@ class _LoginState extends State<Login> {
         ],
       ),
     );
+  }
+
+  Future sigIn() async {
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => Center(
+              child: CircularProgressIndicator(),
+            ));
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailcontroller.text.trim(),
+          password: passwordcontroller.text.trim());
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }

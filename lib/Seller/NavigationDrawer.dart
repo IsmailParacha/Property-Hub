@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 // import 'package:share/share.dart';
@@ -110,7 +111,9 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
             ),
             leading: Icon(Icons.settings_power_outlined,
                 size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
-            onTap: () {},
+            onTap: () {
+              FirebaseAuth.instance.signOut();
+            },
           ),
           SizedBox(
             height: 45,

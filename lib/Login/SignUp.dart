@@ -1,6 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import '../DashBoard/Dashboard.dart';
+import '../main.dart';
 import 'login.dart';
 
 class NewAccount extends StatefulWidget {
@@ -28,6 +28,10 @@ class _NewAccountState extends State<NewAccount> {
   bool value = false;
 
   final _formKey = GlobalKey<FormState>();
+  final emailcontroller = TextEditingController();
+  final passwordcontroller = TextEditingController();
+  final namecontroller = TextEditingController();
+  final phonecontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +66,7 @@ class _NewAccountState extends State<NewAccount> {
                         right: 30,
                       ),
                       child: TextFormField(
+                          controller: namecontroller,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return "Please enter some text User Can't be empthy";
@@ -101,6 +106,7 @@ class _NewAccountState extends State<NewAccount> {
                         right: 30,
                       ),
                       child: TextFormField(
+                        controller: emailcontroller,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
                             enabledBorder: OutlineInputBorder(
@@ -131,6 +137,7 @@ class _NewAccountState extends State<NewAccount> {
                         right: 30,
                       ),
                       child: TextField(
+                          controller: passwordcontroller,
                           obscureText: true,
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
@@ -175,6 +182,7 @@ class _NewAccountState extends State<NewAccount> {
                         right: 30,
                       ),
                       child: TextField(
+                          controller: phonecontroller,
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                               enabledBorder: OutlineInputBorder(
@@ -279,10 +287,7 @@ class _NewAccountState extends State<NewAccount> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Processing Data')),
                           );
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => DashBoard()));
+                          signup();
                         }
                       },
                     ),
@@ -371,5 +376,22 @@ class _NewAccountState extends State<NewAccount> {
         ),
       ),
     );
+  }
+
+  Future signup() async {
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => Center(
+              child: CircularProgressIndicator(),
+            ));
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: emailcontroller.text.trim(),
+          password: passwordcontroller.text.trim());
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
+    navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }

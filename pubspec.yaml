@@ -42,6 +42,8 @@ dependencies:
   readmore: ^2.1.0
   scrollable_list_tabview: ^0.1.6
   animated_splash_screen: ^1.1.0
+  firebase_auth: ^3.5.1
+  cloud_firestore: ^3.4.1
 
 dev_dependencies:
   flutter_test:
