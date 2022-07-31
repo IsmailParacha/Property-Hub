@@ -5,11 +5,19 @@ import 'package:firebase_core/firebase_core.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+      // options: FirebaseOptions(
+      //   apiKey: "AIzaSyDR6I9UKhN7n0z3jtTsUrCoGhXf6klfc60", // Your apiKey
+      //   appId: "1:994634378279:android:e95b37bcf91efd1a557202", // Your appId
+      //   messagingSenderId: "XXX", // Your messagingSenderId
+      //   projectId: "jhjhj-99c05", // Your projectId
+      // ),
+      );
   runApp(MyApp());
 }
 
 final navigatorKey = GlobalKey<NavigatorState>();
+final messengerKey = GlobalKey<ScaffoldMessengerState>();
 
 class MyApp extends StatefulWidget {
   @override
@@ -20,6 +28,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scaffoldMessengerKey: messengerKey,
       navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       home: new Scaffold(

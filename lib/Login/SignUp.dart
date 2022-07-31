@@ -1,5 +1,8 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import '../Screen/Utils.dart';
 import '../main.dart';
 import 'login.dart';
 
@@ -32,6 +35,14 @@ class _NewAccountState extends State<NewAccount> {
   final passwordcontroller = TextEditingController();
   final namecontroller = TextEditingController();
   final phonecontroller = TextEditingController();
+  @override
+  void dispose() {
+    super.dispose();
+    namecontroller.dispose();
+    emailcontroller.dispose();
+    passwordcontroller.dispose();
+    phonecontroller.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -106,9 +117,12 @@ class _NewAccountState extends State<NewAccount> {
                         right: 30,
                       ),
                       child: TextFormField(
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
                         controller: emailcontroller,
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
+                            errorStyle: TextStyle(
+                                color: Color.fromARGB(255, 248, 152, 145)),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
                               borderRadius:
@@ -126,6 +140,10 @@ class _NewAccountState extends State<NewAccount> {
                                 color: Color.fromRGBO(255, 182, 0, 1.0)),
                             hintStyle: TextStyle(color: Colors.white60),
                             hintText: 'Enter Your Email'),
+                        validator: (email) =>
+                            email != null && !EmailValidator.validate(email)
+                                ? "enter a valid Email"
+                                : null,
                       ),
                     ),
                     SizedBox(
@@ -136,42 +154,49 @@ class _NewAccountState extends State<NewAccount> {
                         left: 30,
                         right: 30,
                       ),
-                      child: TextField(
-                          controller: passwordcontroller,
-                          obscureText: true,
-                          style: TextStyle(color: Colors.white),
-                          decoration: InputDecoration(
-                            enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.white),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5.0)),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(255, 182, 0, 1.0)),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5.0)),
-                            ),
-                            labelText: 'Password',
-                            labelStyle: TextStyle(color: Colors.grey),
-                            suffixIcon: IconButton(
-                              icon: Icon(
-                                _isObscure
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                                color: Colors.white,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _isObscure = !_isObscure;
-                                });
-                              },
-                            ),
-                            prefixIcon: Icon(Icons.lock,
+                      child: TextFormField(
+                        controller: passwordcontroller,
+                        obscureText: true,
+                        style: TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          errorStyle: TextStyle(
+                              color: Color.fromARGB(255, 248, 152, 145)),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(5.0)),
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
                                 color: Color.fromRGBO(255, 182, 0, 1.0)),
-                            hintStyle: TextStyle(color: Colors.white60),
-                            hintText: 'Enter Your Password',
-                          )),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(5.0)),
+                          ),
+                          labelText: 'Password',
+                          labelStyle: TextStyle(color: Colors.grey),
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _isObscure
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _isObscure = !_isObscure;
+                              });
+                            },
+                          ),
+                          prefixIcon: Icon(Icons.lock,
+                              color: Color.fromRGBO(255, 182, 0, 1.0)),
+                          hintStyle: TextStyle(color: Colors.white60),
+                          hintText: 'Enter Your Password',
+                        ),
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        validator: (value) => value != null && value.length < 6
+                            ? "Enter minimum 6 characters"
+                            : null,
+                      ),
                     ),
                     SizedBox(
                       height: 10,
@@ -389,8 +414,10 @@ class _NewAccountState extends State<NewAccount> {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: emailcontroller.text.trim(),
           password: passwordcontroller.text.trim());
+      Utils.showSnackBar("Account Successfully Created");
     } on FirebaseAuthException catch (e) {
       print(e);
+      Utils.showSnackBar(e.message);
     }
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }

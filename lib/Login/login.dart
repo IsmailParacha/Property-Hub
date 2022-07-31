@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import '../DashBoard/Dashboard.dart';
+import 'package:flutter/services.dart';
+import 'package:property/Login/forgetscreen.dart';
+import 'package:property/Screen/Utils.dart';
 import '../main.dart';
 import 'signup.dart';
 
@@ -123,9 +124,17 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.only(
                       top: 18,
                     ),
-                    child: Text(
-                      'Forgot Password?',
-                      style: TextStyle(color: Colors.white),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => forgetscreen()));
+                      },
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ),
                   Row(
@@ -279,7 +288,9 @@ class _LoginState extends State<Login> {
           password: passwordcontroller.text.trim());
     } on FirebaseAuthException catch (e) {
       print(e);
+      Utils.showSnackBar(e.message);
     }
+
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }

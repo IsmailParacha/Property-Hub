@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:property/Dashboard/Dashboard.dart';
-import 'package:property/Login/login.dart';
+
 import 'package:property/Login/login_signup.dart';
 import 'package:property/Screen/userprofile.dart';
 
