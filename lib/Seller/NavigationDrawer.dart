@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:share/share.dart';
 // ignore: import_of_legacy_library_into_null_safe
 // import 'package:share/share.dart';
 
@@ -97,11 +98,10 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
             leading: Icon(Icons.share,
                 size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
             onTap: () {
-              // final String url =
-              //     "This Path Of Your Application is On Google Play Or AppStore";
-              // // ignore: unused_local_variable
-              // final RenderObject? box = context.findRenderObject();
-              // Share.share(url);
+              final String url = "https://web.whatsapp.com/";
+              // ignore: unused_local_variable
+              final RenderObject? box = context.findRenderObject();
+              Share.share(url);
             },
           ),
           ListTile(

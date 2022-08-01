@@ -37,6 +37,7 @@ dependencies:
   tuple: ^2.0.0
   country_code_picker: ^1.4.0
   share: ^0.6.3+6
+  flutter_share: ^2.0.0
   another_xlider: ^1.0.0
   currency_picker: ^2.0.4
   readmore: ^2.1.0
@@ -45,6 +46,10 @@ dependencies:
   firebase_auth: ^3.5.1
   email_validator: ^2.1.16
   cloud_firestore: ^3.4.1
+  #for google sigin
+  google_sign_in: ^5.4.0
+  #state managment
+  provider: ^6.0.3
 
 dev_dependencies:
   flutter_test:

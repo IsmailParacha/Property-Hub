@@ -1,9 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:property/Screen/Utils.dart';
 
 class forgetscreen extends StatefulWidget {
@@ -14,8 +11,6 @@ class forgetscreen extends StatefulWidget {
 }
 
 class _forgetscreenState extends State<forgetscreen> {
-  final _formKey = GlobalKey<FormState>();
-
   final emailcontroller = TextEditingController();
 
   @override
@@ -29,10 +24,12 @@ class _forgetscreenState extends State<forgetscreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        textTheme: TextTheme(),
         title: Text(
           "Reset Password",
+          style: TextStyle(color: Colors.black),
         ),
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData.fallback(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
