@@ -37,13 +37,11 @@ class _MyAppState extends State<MyApp> {
             child: AnimatedSplashScreen(
                 duration: 4000,
                 splashTransition: SplashTransition.slideTransition,
-                splashIconSize: 150,
+                splashIconSize: 400,
                 splash: Container(
-                  height: 400,
-                  width: 400,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                    image: AssetImage('images/logo2.png'),
+                    image: AssetImage('images/logo3.jpeg'),
                   )),
                 ),
                 nextScreen: DashBoard()
