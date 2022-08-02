@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:property/widgets/PostAnAdd.dart';
+import '../DashBoard/fav.dart';
 import '../Seller/NavigationDrawer.dart';
 
 class userprofile extends StatefulWidget {
@@ -90,12 +91,16 @@ class _userprofileState extends State<userprofile> {
                           SizedBox(
                             width: 10,
                           ),
-                          userdetail(
-                              'My\nFavorites',
-                              Icon(
-                                Icons.favorite_border_outlined,
-                                size: 27,
-                              )),
+                          InkWell(
+                            onTap: () => Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => Fav())),
+                            child: userdetail(
+                                'My\nFavorites',
+                                Icon(
+                                  Icons.favorite_border_outlined,
+                                  size: 27,
+                                )),
+                          ),
                         ],
                       ),
                       SizedBox(
