@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
 
 class ProjectsWidget extends StatelessWidget {
   final String imagelink;
@@ -120,20 +121,26 @@ class ProjectsWidget extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 )),
                               ),
-                              Container(
-                                margin: EdgeInsets.only(left: 10),
-                                height: 30,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                    color: Color.fromRGBO(57, 65, 96, 1.0),
-                                    border: Border.all()),
-                                child: Center(
-                                    child: Text(
-                                  'Call',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                )),
+                              InkWell(
+                                onTap: () async {
+                                  // ignore: deprecated_member_use
+                                  UrlLauncher.launch("tel://021123456789");
+                                },
+                                child: Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  height: 30,
+                                  width: 40,
+                                  decoration: BoxDecoration(
+                                      color: Color.fromRGBO(57, 65, 96, 1.0),
+                                      border: Border.all()),
+                                  child: Center(
+                                      child: Text(
+                                    'Call',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  )),
+                                ),
                               ),
                               Container(
                                 margin: EdgeInsets.only(left: 10),
