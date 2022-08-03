@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
+import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
 
 class Constructions extends StatefulWidget {
   const Constructions({Key? key}) : super(key: key);
@@ -115,33 +116,39 @@ class _ConstructionsState extends State<Constructions> {
                         )
                       ],
                     ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(90),
-                            color: Color.fromRGBO(57, 65, 96, 1.2),
-                          ),
-                          child: Center(
-                            child: Icon(
-                              Icons.call,
-                              color: Color.fromRGBO(57, 65, 96, 1.0),
-                              size: 24,
+                    InkWell(
+                      onTap: () async {
+                        // ignore: deprecated_member_use
+                        UrlLauncher.launch("tel://021123456");
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(90),
+                              color: Color.fromRGBO(57, 65, 96, 1.2),
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.call,
+                                color: Color.fromRGBO(57, 65, 96, 1.0),
+                                size: 24,
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'CALL',
-                          style: TextStyle(
-                            color: Color.fromRGBO(57, 65, 96, 1.0),
+                          SizedBox(
+                            height: 5,
                           ),
-                        )
-                      ],
+                          Text(
+                            'CALL',
+                            style: TextStyle(
+                              color: Color.fromRGBO(57, 65, 96, 1.0),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ],
                 ),
