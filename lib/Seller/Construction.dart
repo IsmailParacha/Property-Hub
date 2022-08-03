@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
-import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
 
 class Constructions extends StatefulWidget {
   const Constructions({Key? key}) : super(key: key);
