@@ -124,7 +124,7 @@ class ProjectsWidget extends StatelessWidget {
                               InkWell(
                                 onTap: () async {
                                   // ignore: deprecated_member_use
-                                  UrlLauncher.launch("tel://0210000009");
+                                  UrlLauncher.launch("tel://0210000000");
                                 },
                                 child: Container(
                                   margin: EdgeInsets.only(left: 10),
