@@ -106,21 +106,29 @@ class FavoriteWidget extends StatelessWidget {
                           ),
                           Row(
                             children: [
-                              Container(
-                                margin: EdgeInsets.only(left: 10),
-                                height: 30,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                    border: Border.all(
-                                  color: Color.fromRGBO(57, 65, 96, 1.0),
-                                )),
-                                child: Center(
-                                    child: Text(
-                                  'Email',
-                                  style: TextStyle(
-                                      color: Color.fromRGBO(57, 65, 96, 1.0),
-                                      fontWeight: FontWeight.bold),
-                                )),
+                              InkWell(
+                                onTap: () async {
+                                  // ignore: deprecated_member_use
+                                  UrlLauncher.launch(
+                                      "mailto:ismailjanparacha@gmail.com?"
+                                      "subject=This mail is from PropertHub");
+                                },
+                                child: Container(
+                                  margin: EdgeInsets.only(left: 10),
+                                  height: 30,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                      border: Border.all(
+                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  )),
+                                  child: Center(
+                                      child: Text(
+                                    'Email',
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(57, 65, 96, 1.0),
+                                        fontWeight: FontWeight.bold),
+                                  )),
+                                ),
                               ),
                               InkWell(
                                 onTap: () async {
