@@ -60,33 +60,40 @@ class _ConstructionsState extends State<Constructions> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      children: [
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(90),
-                            color: Color.fromRGBO(57, 65, 96, 1.2),
-                          ),
-                          child: Center(
-                            child: Icon(
-                              Icons.email,
-                              color: Color.fromRGBO(57, 65, 96, 1.0),
-                              size: 24,
+                    InkWell(
+                      onTap: () async {
+                        // ignore: deprecated_member_use
+                        UrlLauncher.launch("mailto:ismailjanparacha@gmail.com?"
+                            "subject=This mail is from PropertHub");
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(90),
+                              color: Color.fromRGBO(57, 65, 96, 1.2),
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.email,
+                                color: Color.fromRGBO(57, 65, 96, 1.0),
+                                size: 24,
+                              ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          'EMAIL',
-                          style: TextStyle(
-                            color: Color.fromRGBO(57, 65, 96, 1.0),
+                          SizedBox(
+                            height: 5,
                           ),
-                        )
-                      ],
+                          Text(
+                            'EMAIL',
+                            style: TextStyle(
+                              color: Color.fromRGBO(57, 65, 96, 1.0),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     InkWell(
                       onTap: () async {
