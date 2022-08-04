@@ -15,7 +15,7 @@ class ContactUS extends StatelessWidget {
         iconTheme: IconThemeData.fallback(),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(22.0),
         child: ListView(
           children: [
             Text(
@@ -32,10 +32,10 @@ class ContactUS extends StatelessWidget {
             Text(
               "We at PropertyHub.com are open to any and all inquiries and suggestions you may have.The occasional Hilarious joke wouldn't be entirely amiss either",
               textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 17, height: 1.5),
             ),
             SizedBox(
-              height: 15,
+              height: 18,
             ),
             Form(
                 child: Column(
@@ -48,7 +48,7 @@ class ContactUS extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -57,7 +57,7 @@ class ContactUS extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -66,7 +66,7 @@ class ContactUS extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -82,7 +82,7 @@ class ContactUS extends StatelessWidget {
                   style: TextStyle(fontSize: 15),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
                 Center(
                   child: Container(
