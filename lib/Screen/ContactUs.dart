@@ -30,12 +30,12 @@ class ContactUS extends StatelessWidget {
               height: 15,
             ),
             Text(
-              "We at PropertyHub.com are open to any and all inquiries and suggestions you may have.The occasional Hilarious joke wouldn't be entirely amiss either",
+              "We at PropertyHub.com are open to any and all inquiries and suggestions you may have.The occasional Hilarious joke wouldn't be entirely amiss either.",
               textAlign: TextAlign.justify,
               style: TextStyle(fontSize: 17, height: 1.5),
             ),
             SizedBox(
-              height: 18,
+              height: 20,
             ),
             Form(
                 child: Column(
@@ -48,7 +48,7 @@ class ContactUS extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -57,7 +57,7 @@ class ContactUS extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -66,7 +66,7 @@ class ContactUS extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -75,14 +75,14 @@ class ContactUS extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 25,
                 ),
                 Text(
                   "All Fields are required.",
                   style: TextStyle(fontSize: 15),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Center(
                   child: Container(
