@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:property/Screen/ContactUs.dart';
 import 'package:property/widgets/PostAnAdd.dart';
+import 'package:share/share.dart';
 import '../DashBoard/fav.dart';
 import '../Seller/NavigationDrawer.dart';
 
@@ -195,17 +196,25 @@ class _userprofileState extends State<userprofile> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 40,
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.insert_invitation,
-                      size: 28,
-                    ),
-                    title: Text("Invitation"),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios,
-                      size: 18,
+                InkWell(
+                  onTap: () {
+                    final String url = "https://web.whatsapp.com/";
+                    // ignore: unused_local_variable
+                    final RenderObject? box = context.findRenderObject();
+                    Share.share(url);
+                  },
+                  child: Container(
+                    height: 40,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.insert_invitation,
+                        size: 28,
+                      ),
+                      title: Text("Invitation"),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios,
+                        size: 18,
+                      ),
                     ),
                   ),
                 ),
