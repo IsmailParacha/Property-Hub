@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:property/Screen/ContactUs.dart';
 import 'package:property/widgets/PostAnAdd.dart';
 import '../DashBoard/fav.dart';
 import '../Seller/NavigationDrawer.dart';
@@ -160,17 +161,23 @@ class _userprofileState extends State<userprofile> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 40,
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.contact_mail,
-                      size: 25,
-                    ),
-                    title: Text("Contact Us"),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios,
-                      size: 18,
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ContactUS()));
+                  },
+                  child: Container(
+                    height: 40,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.contact_mail,
+                        size: 25,
+                      ),
+                      title: Text("Contact Us"),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios,
+                        size: 18,
+                      ),
                     ),
                   ),
                 ),

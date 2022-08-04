@@ -6,13 +6,13 @@ import 'package:firebase_core/firebase_core.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      // options: FirebaseOptions(
-      //   apiKey: "AIzaSyDR6I9UKhN7n0z3jtTsUrCoGhXf6klfc60", // Your apiKey
-      //   appId: "1:994634378279:android:e95b37bcf91efd1a557202", // Your appId
-      //   messagingSenderId: "XXX", // Your messagingSenderId
-      //   projectId: "jhjhj-99c05", // Your projectId
-      // ),
-      );
+    options: FirebaseOptions(
+      apiKey: "AIzaSyDR6I9UKhN7n0z3jtTsUrCoGhXf6klfc60", // Your apiKey
+      appId: "1:994634378279:android:e95b37bcf91efd1a557202", // Your appId
+      messagingSenderId: "XXX", // Your messagingSenderId
+      projectId: "jhjhj-99c05", // Your projectId
+    ),
+  );
   runApp(MyApp());
 }
 
