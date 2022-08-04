@@ -2,9 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:property/Screen/ContactUs.dart';
 import 'package:property/widgets/PostAnAdd.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:share/share.dart';
 import '../DashBoard/fav.dart';
 import '../Seller/NavigationDrawer.dart';
+import 'package:rating_dialog/rating_dialog.dart';
 
 class userprofile extends StatefulWidget {
   const userprofile({Key? key}) : super(key: key);
@@ -182,17 +184,20 @@ class _userprofileState extends State<userprofile> {
                     ),
                   ),
                 ),
-                Container(
-                  height: 40,
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.feedback_outlined,
-                      size: 28,
-                    ),
-                    title: Text("Feedback"),
-                    trailing: Icon(
-                      Icons.arrow_forward_ios,
-                      size: 18,
+                InkWell(
+                  onTap: _showRatingAppDialog,
+                  child: Container(
+                    height: 40,
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.feedback_outlined,
+                        size: 28,
+                      ),
+                      title: Text("Feedback"),
+                      trailing: Icon(
+                        Icons.arrow_forward_ios,
+                        size: 18,
+                      ),
                     ),
                   ),
                 ),
@@ -257,6 +262,36 @@ class _userprofileState extends State<userprofile> {
           ],
         ),
       ),
+    );
+  }
+
+  void _showRatingAppDialog() {
+    final _ratingDialog = RatingDialog(
+      starColor: Colors.amber,
+      title: Text('How is Your experience with Property Hub app?'),
+      // message: Text(''),
+      // image: Image.asset(
+      //   "images/logo3.jpeg",
+      //   height: 100,
+      // ),
+      submitButtonText: 'Submit',
+      onCancelled: () => print('cancelled'),
+      onSubmitted: (response) {
+        print('rating: ${response.rating}, '
+            'comment: ${response.comment}');
+
+        if (response.rating < 3.0) {
+          print('response.rating: ${response.rating}');
+        } else {
+          Container();
+        }
+      },
+    );
+
+    showDialog(
+      context: context,
+      barrierDismissible: true,
+      builder: (context) => _ratingDialog,
     );
   }
 }
