@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:property/Screen/ContactUs.dart';
 import 'package:property/Screen/ProdileSetting.dart';
+import 'package:property/Screen/SavedScrren.dart';
 import 'package:property/widgets/PostAnAdd.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:share/share.dart';
@@ -95,12 +96,20 @@ class _userprofileState extends State<userprofile> {
                           SizedBox(
                             width: 10,
                           ),
-                          userdetail(
-                              'My Saved\nSearches',
-                              Icon(
-                                Icons.search,
-                                size: 27,
-                              )),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SavedScreen()));
+                            },
+                            child: userdetail(
+                                'My Saved\nSearches',
+                                Icon(
+                                  Icons.search,
+                                  size: 27,
+                                )),
+                          ),
                           SizedBox(
                             width: 10,
                           ),
