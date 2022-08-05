@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:property/Screen/Search.dart';
 import 'package:property/Seller/NavigationDrawer.dart';
 
 class SavedScreen extends StatelessWidget {
@@ -49,17 +50,22 @@ class SavedScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Container(
-                        height: 40,
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(57, 65, 96, 1.0),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Center(
-                          child: const Text(
-                            'Submit Button',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
-                          ),
-                        )),
+                    child: InkWell(
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Search())),
+                      child: Container(
+                          height: 40,
+                          decoration: BoxDecoration(
+                              color: Color.fromRGBO(57, 65, 96, 1.0),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Center(
+                            child: const Text(
+                              'Search Property',
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white),
+                            ),
+                          )),
+                    ),
                   )
                 ],
               ),
