@@ -24,16 +24,16 @@ class MyPropertyWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(7),
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.1,
-                height: MediaQuery.of(context).size.height * 0.16,
+                height: MediaQuery.of(context).size.height * 0.10,
                 decoration: BoxDecoration(),
                 child: Row(
                   children: [
                     Container(
                       margin: EdgeInsets.only(left: 5.0),
-                      height: 100,
-                      width: 100,
+                      height: 60,
+                      width: 60,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(5),
                           image: DecorationImage(
                               image: AssetImage('$imagelink'),
                               fit: BoxFit.cover)),
