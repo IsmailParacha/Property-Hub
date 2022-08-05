@@ -183,7 +183,7 @@ class ProfileSetting extends StatelessWidget {
                 ),
                 isExpanded: true,
                 hint: const Text(
-                  'Select Your Gender',
+                  'Area',
                   style: TextStyle(
                       fontSize: 16, color: Color.fromRGBO(57, 65, 96, 1.0)),
                 ),
@@ -233,7 +233,7 @@ class ProfileSetting extends StatelessWidget {
                 ),
                 isExpanded: true,
                 hint: const Text(
-                  'Select Your Gender',
+                  'Language',
                   style: TextStyle(
                       fontSize: 16, color: Color.fromRGBO(57, 65, 96, 1.0)),
                 ),
