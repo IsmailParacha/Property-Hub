@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:property/Screen/ContactUs.dart';
+import 'package:property/Screen/ProdileSetting.dart';
 import 'package:property/widgets/PostAnAdd.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:share/share.dart';
@@ -77,12 +78,20 @@ class _userprofileState extends State<userprofile> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          userdetail(
-                              'Profile\nSetting',
-                              Icon(
-                                Icons.settings,
-                                size: 27,
-                              )),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProfileSetting()));
+                            },
+                            child: userdetail(
+                                'Profile\nSetting',
+                                Icon(
+                                  Icons.settings,
+                                  size: 27,
+                                )),
+                          ),
                           SizedBox(
                             width: 10,
                           ),

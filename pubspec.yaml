@@ -35,7 +35,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   animated_bottom_navigation_bar: ^0.3.2
   tuple: ^2.0.0
-  country_code_picker: ^1.4.0
+  country_picker: ^2.0.15
+  dropdown_button2: ^1.7.1
+
   share: ^0.6.3+6
   flutter_share: ^2.0.0
   another_xlider: ^1.0.0
