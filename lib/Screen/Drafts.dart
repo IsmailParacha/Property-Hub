@@ -11,6 +11,10 @@ class DraftProperty extends StatelessWidget {
     return Scaffold(
       drawer: NavigationDrawer(),
       appBar: AppBar(
+        title: Text(
+          "Draft Properties",
+          style: TextStyle(color: Colors.black),
+        ),
         backgroundColor: Colors.white,
         iconTheme: IconThemeData.fallback(),
       ),
@@ -19,10 +23,6 @@ class DraftProperty extends StatelessWidget {
         child: ListView(
           children: [
             const SizedBox(height: 15),
-            Text(
-              "Draft Properties",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-            ),
             const SizedBox(height: 20),
             Center(
               child: Column(

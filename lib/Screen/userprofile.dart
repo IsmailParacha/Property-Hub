@@ -4,6 +4,7 @@ import 'package:property/Screen/ContactUs.dart';
 import 'package:property/Screen/Drafts.dart';
 import 'package:property/Screen/MyProperty.dart';
 import 'package:property/Screen/ProdileSetting.dart';
+import 'package:property/Screen/QuotoAndCredits.dart';
 import 'package:property/Screen/SavedScrren.dart';
 import 'package:property/widgets/PostAnAdd.dart';
 // ignore: import_of_legacy_library_into_null_safe
@@ -167,12 +168,20 @@ class _userprofileState extends State<userprofile> {
                           SizedBox(
                             width: 10,
                           ),
-                          userdetail(
-                              'Quota and\nCredits',
-                              Icon(
-                                Icons.bar_chart_outlined,
-                                size: 27,
-                              )),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => QuotoAndCredits()));
+                            },
+                            child: userdetail(
+                                'Quota and\nCredits',
+                                Icon(
+                                  Icons.bar_chart_outlined,
+                                  size: 27,
+                                )),
+                          ),
                         ],
                       ),
                       SizedBox(
