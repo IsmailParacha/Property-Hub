@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:property/Screen/Agents.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:share/share.dart';
 
@@ -67,16 +68,22 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                 size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
             onTap: () {},
           ),
-          ListTile(
-            title: Text(
-              "Agents",
-              style: TextStyle(fontSize: 18.0),
-            ),
-            leading: Icon(Icons.support_agent_outlined,
-                size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
+          InkWell(
             onTap: () {
-              // Navigator.push(context, MaterialPageRoute(builder: (context)=>Agents()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Agents()));
             },
+            child: ListTile(
+              title: Text(
+                "Agents",
+                style: TextStyle(fontSize: 18.0),
+              ),
+              leading: Icon(Icons.support_agent_outlined,
+                  size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
+              onTap: () {
+                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Agents()));
+              },
+            ),
           ),
           ListTile(
             title: Text(
