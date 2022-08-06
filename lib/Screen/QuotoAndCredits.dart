@@ -65,6 +65,7 @@ class _QuotoAndCreditsState extends State<QuotoAndCredits> {
                 ),
               ],
             ),
+            SizedBox(height: 20),
             Divider(
               height: 5,
               color: Colors.grey,
@@ -180,6 +181,40 @@ class _QuotoAndCreditsState extends State<QuotoAndCredits> {
             Divider(
               color: Color.fromARGB(255, 195, 195, 195),
             ),
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                      height: 180,
+                      child: Image(image: AssetImage('images/quoto.png'))),
+                  SizedBox(height: 20),
+                  Text(
+                    "Become a Premium User",
+                    style: TextStyle(fontSize: 19),
+                  ),
+                  SizedBox(height: 20),
+                  Text(
+                    "Buy Premium Listings Quoto and unlock maximum reach.Upgrade your ads Hot/Classic to get the deal done even faster!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.black54),
+                  ),
+                  SizedBox(height: 20),
+                  Container(
+                    width: 150,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Color.fromRGBO(57, 65, 96, 1.0)),
+                    child: Center(
+                      child: Text(
+                        "Call Sales Center",
+                        style: TextStyle(color: Colors.white, fontSize: 15),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
