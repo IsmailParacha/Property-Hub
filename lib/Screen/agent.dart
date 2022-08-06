@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart' as UrlLauncher;
 
 class Agents extends StatefulWidget {
   const Agents({Key? key}) : super(key: key);
@@ -123,53 +124,73 @@ class _AgentsState extends State<Agents> {
                       ),
                       Row(
                         children: [
-                          Container(
-                            margin: EdgeInsets.only(left: 10),
-                            height: 30,
-                            width: 50,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                              color: Color.fromRGBO(57, 65, 96, 1.0),
-                            )),
-                            child: Center(
-                                child: Text(
-                              'Email',
-                              style: TextStyle(
-                                  color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  fontWeight: FontWeight.bold),
-                            )),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 10),
-                            height: 30,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              color: Color.fromRGBO(57, 65, 96, 1.0),
-                              border: Border.all(),
+                          InkWell(
+                            onTap: () async {
+                              // ignore: deprecated_member_use
+                              UrlLauncher.launch(
+                                  "mailto:ismailjanparacha@gmail.com?"
+                                  "subject=This mail is from PropertHub");
+                            },
+                            child: Container(
+                              margin: EdgeInsets.only(left: 10),
+                              height: 30,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                color: Color.fromRGBO(57, 65, 96, 1.0),
+                              )),
+                              child: Center(
+                                  child: Text(
+                                'Email',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                    fontWeight: FontWeight.bold),
+                              )),
                             ),
-                            child: Center(
-                                child: Text(
-                              'Call',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                            )),
                           ),
-                          Container(
-                            margin: EdgeInsets.only(left: 10),
-                            height: 30,
-                            width: 50,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                              color: Color.fromRGBO(57, 65, 96, 1.0),
-                            )),
-                            child: Center(
-                                child: Text(
-                              'SMS',
-                              style: TextStyle(
-                                  color: Color.fromRGBO(57, 65, 96, 1.0),
-                                  fontWeight: FontWeight.bold),
-                            )),
+                          InkWell(
+                            onTap: () async {
+                              // ignore: deprecated_member_use
+                              UrlLauncher.launch("tel://0210000000");
+                            },
+                            child: Container(
+                              margin: EdgeInsets.only(left: 10),
+                              height: 30,
+                              width: 40,
+                              decoration: BoxDecoration(
+                                color: Color.fromRGBO(57, 65, 96, 1.0),
+                                border: Border.all(),
+                              ),
+                              child: Center(
+                                  child: Text(
+                                'Call',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              )),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () async {
+                              // ignore: deprecated_member_use
+                              UrlLauncher.launch("sms:03160923455");
+                            },
+                            child: Container(
+                              margin: EdgeInsets.only(left: 10),
+                              height: 30,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                color: Color.fromRGBO(57, 65, 96, 1.0),
+                              )),
+                              child: Center(
+                                  child: Text(
+                                'SMS',
+                                style: TextStyle(
+                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                    fontWeight: FontWeight.bold),
+                              )),
+                            ),
                           ),
                         ],
                       )
