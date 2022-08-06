@@ -68,22 +68,17 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                 size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
             onTap: () {},
           ),
-          InkWell(
+          ListTile(
+            title: Text(
+              "Agents",
+              style: TextStyle(fontSize: 18.0),
+            ),
+            leading: Icon(Icons.support_agent_outlined,
+                size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
             onTap: () {
               Navigator.push(
                   context, MaterialPageRoute(builder: (context) => Agents()));
             },
-            child: ListTile(
-              title: Text(
-                "Agents",
-                style: TextStyle(fontSize: 18.0),
-              ),
-              leading: Icon(Icons.support_agent_outlined,
-                  size: 30.0, color: Color.fromRGBO(57, 65, 96, 1.0)),
-              onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context)=>Agents()));
-              },
-            ),
           ),
           ListTile(
             title: Text(
