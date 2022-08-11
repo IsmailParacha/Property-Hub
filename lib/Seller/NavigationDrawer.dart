@@ -13,7 +13,6 @@ class NavigationDrawer extends StatefulWidget {
 }
 
 class _NavigationDrawerState extends State<NavigationDrawer> {
-  String name = "";
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -31,32 +30,16 @@ class _NavigationDrawerState extends State<NavigationDrawer> {
                   ),
                   Container(
                     height: 40,
-                    width: 180,
                     decoration: BoxDecoration(
                         color: Colors.black38,
                         borderRadius: BorderRadius.circular(10)),
                     child: Center(
-                      child: StreamBuilder<User?>(
-                        stream: FirebaseAuth.instance.authStateChanges(),
-                        builder: (context, Snapshot) {
-                          if (Snapshot.hasData) {
-                            return (Text(
-                              "Ismail",
-                              style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ));
-                          } else {
-                            return (Text(
-                              "Unkown",
-                              style: TextStyle(
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            ));
-                          }
-                        },
+                      child: Text(
+                        "Ismail Paracha",
+                        style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                     ),
                   ),
