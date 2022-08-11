@@ -11,6 +11,7 @@ import 'package:property/widgets/platinum.dart';
 import '../../screen/new_project.dart';
 import '../Seller/Construction.dart';
 import '../Seller/NavigationDrawer.dart';
+import 'ViewAll.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -172,7 +173,7 @@ class _HomeState extends State<Home> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        Projects())),
+                                                        ViewAll())),
                                             child: Text(
                                               "View All",
                                               style: TextStyle(
@@ -287,7 +288,7 @@ class _HomeState extends State<Home> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            Projects())),
+                                                            ViewAll())),
                                                 child: Text(
                                                   'View All',
                                                   style: TextStyle(
@@ -458,7 +459,7 @@ class _HomeState extends State<Home> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        Projects())),
+                                                        ViewAll())),
                                             child: Text(
                                               "View All",
                                               style: TextStyle(
@@ -570,7 +571,7 @@ class _HomeState extends State<Home> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            Projects())),
+                                                            ViewAll())),
                                                 child: Text(
                                                   'View All',
                                                   style: TextStyle(
@@ -743,7 +744,7 @@ class _HomeState extends State<Home> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            Projects())),
+                                                            ViewAll())),
                                                 child: Text(
                                                   'View All',
                                                   style: TextStyle(
@@ -822,7 +823,7 @@ class _HomeState extends State<Home> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            Projects())),
+                                                            ViewAll())),
                                                 child: Text(
                                                   'View All',
                                                   style: TextStyle(
@@ -946,7 +947,7 @@ class _HomeState extends State<Home> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              Projects())),
+                                                              ViewAll())),
                                                   child: Text(
                                                     'View All',
                                                     style: TextStyle(

@@ -24,7 +24,7 @@ class ProjectsWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(7),
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.1,
-                height: MediaQuery.of(context).size.height * 0.16,
+                height: MediaQuery.of(context).size.height * 0.17,
                 decoration: BoxDecoration(),
                 child: Row(
                   children: [
@@ -76,8 +76,11 @@ class ProjectsWidget extends StatelessWidget {
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                Icon(
-                                  Icons.favorite_border_outlined,
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 10.0),
+                                  child: Icon(
+                                    Icons.favorite_border_outlined,
+                                  ),
                                 )
                               ],
                             ),
