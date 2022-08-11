@@ -1,6 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ProfileSetting extends StatelessWidget {
   final List<String> currency = [
     'PKR',
@@ -160,6 +161,7 @@ class ProfileSetting extends StatelessWidget {
                   if (value == null) {
                     return 'Please select gender.';
                   }
+                  return null;
                 },
                 onChanged: (value) {
                   //Do something when changing the item if you want.
@@ -210,6 +212,7 @@ class ProfileSetting extends StatelessWidget {
                   if (value == null) {
                     return 'Area';
                   }
+                  return null;
                 },
                 onChanged: (value) {
                   //Do something when changing the item if you want.
@@ -260,6 +263,7 @@ class ProfileSetting extends StatelessWidget {
                   if (value == null) {
                     return 'Language';
                   }
+                  return null;
                 },
                 onChanged: (value) {
                   //Do something when changing the item if you want.
