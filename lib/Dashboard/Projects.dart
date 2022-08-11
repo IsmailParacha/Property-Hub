@@ -86,7 +86,7 @@ class _ProjectsState extends State<Projects> {
                         child: ProjectsWidget(
                           "images/property1.jpg",
                           'Shayan Iconic Palace',
-                          'Karachi Cooperative  Socaity,Karachi',
+                          'Karachi Cooperative Socaity,Karachi',
                           '1.2 Crore to 3.1 Crore',
                         ),
                       ),
