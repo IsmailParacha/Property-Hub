@@ -313,7 +313,7 @@ class _NewAccountState extends State<NewAccount> {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(content: Text('Processing Data')),
                           );
-                          // signup();
+                          signup();
                         }
                       },
                     ),
