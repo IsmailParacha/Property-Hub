@@ -76,9 +76,12 @@ class FavoriteWidget extends StatelessWidget {
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                Icon(
-                                  Icons.favorite,
-                                  color: Color.fromRGBO(57, 65, 96, 1.0),
+                                Padding(
+                                  padding: const EdgeInsets.only(right: 10.0),
+                                  child: Icon(
+                                    Icons.favorite,
+                                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                                  ),
                                 )
                               ],
                             ),
