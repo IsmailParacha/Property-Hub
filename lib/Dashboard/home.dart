@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property/DashBoard/Projects.dart';
 import 'package:property/Screen/Search.dart';
 import 'package:property/widgets/ConstructionSection.dart';
 import 'package:property/widgets/ExclusiveSection.dart';
@@ -166,11 +167,18 @@ class _HomeState extends State<Home> {
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.bold),
                                           ),
-                                          Text(
-                                            "View All",
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.blue),
+                                          InkWell(
+                                            onTap: () => Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        Projects())),
+                                            child: Text(
+                                              "View All",
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Colors.blue),
+                                            ),
                                           )
                                         ],
                                       ),
@@ -274,11 +282,18 @@ class _HomeState extends State<Home> {
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
-                                              Text(
-                                                'View All',
-                                                style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.blue),
+                                              InkWell(
+                                                onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            Projects())),
+                                                child: Text(
+                                                  'View All',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.blue),
+                                                ),
                                               )
                                             ],
                                           ),
@@ -354,11 +369,14 @@ class _HomeState extends State<Home> {
                                                       fontWeight:
                                                           FontWeight.bold),
                                                 ),
-                                                Text(
-                                                  'View All',
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Colors.blue),
+                                                InkWell(
+                                                  onTap: () {},
+                                                  child: Text(
+                                                    'View All',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        color: Colors.blue),
+                                                  ),
                                                 )
                                               ],
                                             ),
@@ -435,11 +453,18 @@ class _HomeState extends State<Home> {
                                                 fontSize: 14,
                                                 fontWeight: FontWeight.bold),
                                           ),
-                                          Text(
-                                            "View All",
-                                            style: TextStyle(
-                                                fontSize: 14,
-                                                color: Colors.blue),
+                                          InkWell(
+                                            onTap: () => Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        Projects())),
+                                            child: Text(
+                                              "View All",
+                                              style: TextStyle(
+                                                  fontSize: 14,
+                                                  color: Colors.blue),
+                                            ),
                                           )
                                         ],
                                       ),
@@ -540,11 +565,18 @@ class _HomeState extends State<Home> {
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
-                                              Text(
-                                                'View All',
-                                                style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.blue),
+                                              InkWell(
+                                                onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            Projects())),
+                                                child: Text(
+                                                  'View All',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.blue),
+                                                ),
                                               )
                                             ],
                                           ),
@@ -620,11 +652,14 @@ class _HomeState extends State<Home> {
                                                       fontWeight:
                                                           FontWeight.bold),
                                                 ),
-                                                Text(
-                                                  'View All',
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Colors.blue),
+                                                InkWell(
+                                                  onTap: () {},
+                                                  child: Text(
+                                                    'View All',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        color: Colors.blue),
+                                                  ),
                                                 )
                                               ],
                                             ),
@@ -703,11 +738,18 @@ class _HomeState extends State<Home> {
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
-                                              Text(
-                                                'View All',
-                                                style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.blue),
+                                              InkWell(
+                                                onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            Projects())),
+                                                child: Text(
+                                                  'View All',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.blue),
+                                                ),
                                               )
                                             ],
                                           ),
@@ -775,11 +817,18 @@ class _HomeState extends State<Home> {
                                               SizedBox(
                                                 width: 80,
                                               ),
-                                              Text(
-                                                'View All',
-                                                style: TextStyle(
-                                                    fontSize: 14,
-                                                    color: Colors.blue),
+                                              InkWell(
+                                                onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            Projects())),
+                                                child: Text(
+                                                  'View All',
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.blue),
+                                                ),
                                               )
                                             ],
                                           ),
@@ -892,11 +941,18 @@ class _HomeState extends State<Home> {
                                                       fontWeight:
                                                           FontWeight.bold),
                                                 ),
-                                                Text(
-                                                  'View All',
-                                                  style: TextStyle(
-                                                      fontSize: 14,
-                                                      color: Colors.blue),
+                                                InkWell(
+                                                  onTap: () => Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              Projects())),
+                                                  child: Text(
+                                                    'View All',
+                                                    style: TextStyle(
+                                                        fontSize: 14,
+                                                        color: Colors.blue),
+                                                  ),
                                                 )
                                               ],
                                             ),
@@ -974,11 +1030,14 @@ class _HomeState extends State<Home> {
                                                         fontWeight:
                                                             FontWeight.bold),
                                                   ),
-                                                  Text(
-                                                    'View All',
-                                                    style: TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.blue),
+                                                  InkWell(
+                                                    onTap: () {},
+                                                    child: Text(
+                                                      'View All',
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: Colors.blue),
+                                                    ),
                                                   )
                                                 ],
                                               ),

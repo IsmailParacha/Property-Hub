@@ -47,17 +47,20 @@ class PostAdd extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                height: 30,
-                width: 200,
-                decoration: BoxDecoration(
-                  color: Color.fromRGBO(57, 65, 96, 1.0),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Center(
-                  child: Text(
-                    'Post an Ad',
-                    style: TextStyle(color: Colors.white),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  height: 30,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(57, 65, 96, 1.0),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Post an Ad',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),
