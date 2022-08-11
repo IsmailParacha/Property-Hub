@@ -289,8 +289,9 @@ class _LoginState extends State<Login> {
     } on FirebaseAuthException catch (e) {
       print(e);
       Utils.showSnackBar(e.message);
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
     }
 
-    navigatorKey.currentState!.popUntil((route) => route.isFirst);
+    // navigatorKey.currentState!.popUntil((route) => route.isFirst);
   }
 }
