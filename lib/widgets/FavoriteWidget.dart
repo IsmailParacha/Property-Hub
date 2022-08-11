@@ -24,7 +24,7 @@ class FavoriteWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(7),
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.1,
-                height: MediaQuery.of(context).size.height * 0.16,
+                height: MediaQuery.of(context).size.height * 0.17,
                 decoration: BoxDecoration(),
                 child: Row(
                   children: [
@@ -77,7 +77,7 @@ class FavoriteWidget extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 10.0),
+                                  padding: const EdgeInsets.only(right: 12.0),
                                   child: Icon(
                                     Icons.favorite,
                                     color: Color.fromRGBO(57, 65, 96, 1.0),

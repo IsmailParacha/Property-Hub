@@ -77,7 +77,7 @@ class ProjectsWidget extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 10.0),
+                                  padding: const EdgeInsets.only(right: 12.0),
                                   child: Icon(
                                     Icons.favorite_border_outlined,
                                   ),
