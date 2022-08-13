@@ -5,14 +5,14 @@ import 'package:share/share.dart';
 
 import '../Screen/agent.dart';
 
-class NavigationDrawer extends StatefulWidget {
-  const NavigationDrawer({Key? key}) : super(key: key);
+class NavigationDrawerLogout extends StatefulWidget {
+  const NavigationDrawerLogout({Key? key}) : super(key: key);
 
   @override
-  _NavigationDrawerState createState() => _NavigationDrawerState();
+  _NavigationDrawerLogoutState createState() => _NavigationDrawerLogoutState();
 }
 
-class _NavigationDrawerState extends State<NavigationDrawer> {
+class _NavigationDrawerLogoutState extends State<NavigationDrawerLogout> {
   @override
   Widget build(BuildContext context) {
     return Drawer(

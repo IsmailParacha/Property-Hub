@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:property/Screen/Search.dart';
-import 'package:property/Seller/NavigationDrawer.dart';
+import 'package:property/Seller/NavigationDrawerLogin.dart';
 
 class SavedScreen extends StatelessWidget {
   const SavedScreen({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class SavedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavigationDrawer(),
+      drawer: NavigationDrawerLogin(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         iconTheme: IconThemeData.fallback(),

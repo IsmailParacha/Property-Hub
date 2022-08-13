@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import '../Seller/NavigationDrawer.dart';
+import 'package:property/Seller/NavigationDrawerLogin.dart';
 
 class QuotoAndCredits extends StatefulWidget {
   const QuotoAndCredits({Key? key}) : super(key: key);
@@ -15,7 +14,7 @@ class _QuotoAndCreditsState extends State<QuotoAndCredits> {
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
-      drawer: NavigationDrawer(),
+      drawer: NavigationDrawerLogin(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         iconTheme: IconThemeData.fallback(),

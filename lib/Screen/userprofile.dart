@@ -6,11 +6,11 @@ import 'package:property/Screen/MyProperty.dart';
 import 'package:property/Screen/ProdileSetting.dart';
 import 'package:property/Screen/QuotoAndCredits.dart';
 import 'package:property/Screen/SavedScrren.dart';
+import 'package:property/Seller/NavigationDrawerLogin.dart';
 import 'package:property/widgets/PostAnAdd.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:share/share.dart';
 import '../DashBoard/fav.dart';
-import '../Seller/NavigationDrawer.dart';
 import 'package:rating_dialog/rating_dialog.dart';
 
 class userprofile extends StatefulWidget {
@@ -25,7 +25,7 @@ class _userprofileState extends State<userprofile> {
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
-      drawer: NavigationDrawer(),
+      drawer: NavigationDrawerLogin(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         iconTheme: IconThemeData.fallback(),

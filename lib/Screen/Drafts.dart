@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-
-import 'package:property/Seller/NavigationDrawer.dart';
+import 'package:property/Seller/NavigationDrawerLogin.dart';
 
 class DraftProperty extends StatelessWidget {
   const DraftProperty({Key? key}) : super(key: key);
@@ -9,7 +8,7 @@ class DraftProperty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: NavigationDrawer(),
+      drawer: NavigationDrawerLogin(),
       appBar: AppBar(
         title: Text(
           "Draft Properties",

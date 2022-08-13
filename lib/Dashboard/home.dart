@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:property/Screen/Search.dart';
 import 'package:property/widgets/ConstructionSection.dart';
@@ -9,7 +10,8 @@ import 'package:property/widgets/Recommended.dart';
 import 'package:property/widgets/platinum.dart';
 import '../../screen/new_project.dart';
 import '../Seller/Construction.dart';
-import '../Seller/NavigationDrawer.dart';
+import '../Seller/NavigationDrawerLogin.dart';
+import '../Seller/NavigationDrawerLogout.dart';
 import 'ViewAll.dart';
 
 class Home extends StatefulWidget {
@@ -27,7 +29,16 @@ class _HomeState extends State<Home> {
       length: 3,
       child: Scaffold(
         key: _scaffoldKey,
-        drawer: NavigationDrawer(),
+        drawer: StreamBuilder<User?>(
+          stream: FirebaseAuth.instance.authStateChanges(),
+          builder: (context, Snapshot) {
+            if (Snapshot.hasData) {
+              return NavigationDrawerLogin();
+            } else {
+              return NavigationDrawerLogout();
+            }
+          },
+        ),
         body: Stack(
           clipBehavior: Clip.none,
           children: [
