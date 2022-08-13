@@ -35,7 +35,7 @@ class _NavigationDrawerLogoutState extends State<NavigationDrawerLogout> {
                         borderRadius: BorderRadius.circular(10)),
                     child: Center(
                       child: Text(
-                        "Ismail Paracha",
+                        "Unknown User",
                         style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
