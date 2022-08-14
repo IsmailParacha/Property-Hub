@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property/Dashboard/Profile.dart';
 
 class PostAdd extends StatelessWidget {
   const PostAdd({Key? key}) : super(key: key);
@@ -48,7 +49,10 @@ class PostAdd extends StatelessWidget {
                 ],
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Profile()));
+                },
                 child: Container(
                   height: 30,
                   width: 200,
