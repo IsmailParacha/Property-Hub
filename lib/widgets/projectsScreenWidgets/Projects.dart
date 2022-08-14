@@ -24,7 +24,7 @@ class ProjectsWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(7),
               child: Container(
                 width: MediaQuery.of(context).size.width / 1.1,
-                height: MediaQuery.of(context).size.height * 0.17,
+                height: MediaQuery.of(context).size.height * 0.18,
                 decoration: BoxDecoration(),
                 child: Row(
                   children: [
